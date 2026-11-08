@@ -733,6 +733,66 @@ body{letter-spacing:-.022em;font-size:16px}
 @media (max-width:759px){.fin4{grid-template-columns:1fr 1fr}}
 .scene .vcar{max-width:100%}
 .tool{right:43%;top:-6%}
+/*vz*/
+.zv{margin:28px 0 0}
+.zcard{background:var(--k2);border:1px solid var(--kl);border-radius:20px;overflow:hidden;transition:translate .25s,border-color .25s}
+.zcard:hover{translate:0 -3px;border-color:rgba(255,255,255,.4)}
+.lt .zcard{background:#fff;border-color:var(--wl)}.lt .zcard:hover{border-color:var(--red)}
+.zcard svg{display:block;width:100%;height:auto}
+/* garage bays */
+.zbays{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.zbay{flex:1 1 180px;min-width:0;margin:0}
+.zbay figcaption{display:flex;align-items:center;gap:10px;padding:13px 14px 15px;font-size:15px;line-height:1.25}
+.zbay figcaption i{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--red);color:#fff;font-style:normal;font-size:15px;line-height:1;flex:none}
+.zbay:last-child svg{background:#1B1B1B}
+@media (max-width:1180px){.zbay:last-child svg{height:170px}}
+.zbay small{display:block;font-size:13px;color:var(--kt);line-height:1.3}
+@media (max-width:759px){.zbay{flex:1 1 40%}.zbay figcaption{padding:11px;font-size:14px}.zbay small{font-size:12.5px}}
+/* road lanes */
+.zlane{position:relative;margin-top:28px;background:#141414;border-radius:20px;overflow:hidden;color:#fff;transition:translate .25s}
+.zlane:hover{translate:0 -3px}
+.zlane>svg{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+.zl-in{position:relative;z-index:1;padding:18px clamp(14px,3vw,30px) 8px}
+.zl-h,.zl-r{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.7fr) minmax(0,1.1fr) minmax(0,.5fr) minmax(0,1.3fr);align-items:center;gap:8px}
+.zl-h{font-size:13px;color:#BDBDBD;padding-bottom:6px;text-align:center}
+.zl-h span:first-child{text-align:left}
+.zl-r{min-height:68px;border-bottom:2px dashed #3A3A3A}
+.zl-r:last-of-type{border-bottom:0}
+.zl-r .tn{font-size:15px;font-weight:600;letter-spacing:-.02em}
+.zs{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 8px;border-radius:12px;font-weight:600;font-size:clamp(15px,1.6vw,18px);line-height:1;background:#2A2A2A;color:#fff;text-align:center}
+.zs.v{background:var(--red)}.zs.e{background:var(--steel);color:#111}.zs.d{background:none;color:#7f7f7f}
+.zl-cap{position:relative;z-index:1;padding:8px clamp(14px,3vw,30px) 18px;font-size:14.5px;color:#D5D5D5;line-height:1.35;text-wrap:pretty}
+@media (max-width:759px){.zl-h{display:none}.zl-r{grid-template-columns:1fr 1fr 40px 1fr;padding:6px 0 12px}.zl-r .tn{grid-column:1/-1;padding-top:6px;font-size:14px}.zs{min-height:42px;font-size:15px}}
+/* cold */
+.zcold{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.zcold figure{margin:0}
+.zcold figcaption{padding:14px 18px 18px;display:grid;gap:3px;font-size:15.5px;line-height:1.3}
+.zcold b,.zcold s{font-size:clamp(20px,2.2vw,26px);font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.zcold s{color:var(--redw)}
+.zcold span{color:var(--ink2)}
+@media (max-width:759px){.zcold{grid-template-columns:1fr}}
+/* zu cards */
+.zzu{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.zzu figure{margin:0}
+.zzu figcaption{padding:14px 18px 18px;display:grid;gap:5px}
+.zzu .tg{display:inline-flex;align-items:center;justify-content:center;width:max-content;min-height:30px;padding:0 13px;border-radius:9px;background:var(--red);color:#fff;font-size:14px;font-weight:600;line-height:1}
+.zzu .tg.g{background:#E9E9E9;color:#111}
+.zzu p{font-size:clamp(17px,1.8vw,21px);font-weight:600;letter-spacing:-.03em;line-height:1.2;margin:4px 0 0}
+.zzu p i{font-style:normal;color:var(--redt)}
+.zzu .zru{font-size:15px;color:var(--kt);line-height:1.3}
+@media (max-width:759px){.zzu{grid-template-columns:1fr}}
+/* routing */
+.zrt{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,1.15fr) minmax(0,1fr);align-items:stretch;margin-top:12px;padding:18px clamp(12px,3vw,34px);background:#fff;border-radius:20px;color:var(--ink);transition:translate .25s}
+.zrt:hover{translate:0 -3px}
+.zrt>svg{width:100%;height:276px;display:block}
+.zrc{display:grid;grid-template-rows:repeat(6,46px)}
+.zrc span{display:flex;align-items:center;justify-content:center;margin:4px 0;font-weight:600;font-size:clamp(16px,1.7vw,20px);border-radius:12px;background:#ECECEC;line-height:1}
+.zrc.rgt span{background:#111;color:#fff}
+.zrc.rgt .hot{background:var(--red)}
+.zrc .bl,.zrc.rgt .bl{background:none}
+.zrt-c{margin-top:12px;font-size:15px;color:var(--ink2);text-align:center;line-height:1.35;text-wrap:pretty}
+.zrt-c b{color:var(--ink);font-weight:600}
+/*/vz*/
 </style>
 <svg style="position:absolute;width:0;height:0" aria-hidden="true"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6"/><path d="M8.5 6H18v9.5"/></symbol>
 <symbol id="i-say" viewBox="0 0 24 24"><path d="M4 9.5v5h3.6L12.5 19V5L7.6 9.5H4z" fill="currentColor"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6"/><path d="M18.3 6.4a8 8 0 0 1 0 11.2"/></symbol>
@@ -887,6 +947,15 @@ body{letter-spacing:-.022em;font-size:16px}
       <div class="lchip rv"><span class="tile"><svg class="ic"><use href="#i-steps"/></svg></span>Нет <span lang="de">sein</span>: нет фразы <em>она уехала</em></div>
       <div class="lchip rv"><span class="tile"><svg class="ic"><use href="#i-door"/></svg></span>Нет <span lang="de">sein</span>: нет фразы <em>дверь закрыта</em></div>
     </div>
+<!--vz-->
+    <div class="zbays" id="zBays">
+      <figure class="zbay zcard"><svg viewBox="0 0 220 170" role="img" aria-label="Человек с бейджем в боксе"><rect width="220" height="170" fill="#1B1B1B"/><path d="M0 142h220v28H0z" fill="#111"/><path d="M0 142h220" stroke="#3A3A3A" stroke-width="2"/><path d="M12 142V22a6 6 0 0 1 6-6h184a6 6 0 0 1 6 6v120" fill="none" stroke="#3A3A3A" stroke-width="3"/><circle cx="110" cy="56" r="20" fill="#F4F4F4"/><path d="M74 142c2-40 18-60 36-60s34 20 36 60z" fill="#F4F4F4"/><rect class="zb-t" x="95" y="100" width="30" height="22" rx="4" fill="#E5261A"/><path d="M103 111h14" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg><figcaption><i>1</i><span>Связка<small lang="de">Ich bin 30 Jahre alt.</small></span></figcaption></figure>
+      <figure class="zbay zcard"><svg viewBox="0 0 220 170" role="img" aria-label="Машина уезжает из бокса"><rect width="220" height="170" fill="#1B1B1B"/><path d="M0 142h220v28H0z" fill="#111"/><path d="M0 142h220" stroke="#3A3A3A" stroke-width="2"/><path d="M12 142V22a6 6 0 0 1 6-6h184a6 6 0 0 1 6 6v120" fill="none" stroke="#3A3A3A" stroke-width="3"/><g class="zb-c"><path d="M42 128c0-12 7-17 17-19l15-20c3-4 8-6 13-6h47c6 0 11 2 15 6l14 20c11 2 19 7 19 19z" fill="#E5261A"/><path d="M86 90h19v18H71zM112 90h22c3 0 6 1 8 4l9 14h-39z" fill="#0A0A0A"/><circle cx="74" cy="132" r="13" fill="#0A0A0A"/><circle cx="74" cy="132" r="5" fill="#BDBDBD"/><circle cx="156" cy="132" r="13" fill="#0A0A0A"/><circle cx="156" cy="132" r="5" fill="#BDBDBD"/></g><g stroke="#7D8B9C" stroke-width="4" stroke-linecap="round"><path class="zb-l" d="M18 122h16"/><path class="zb-l" d="M10 134h20"/></g></svg><figcaption><i>2</i><span>Прошедшее<small lang="de">Sie ist nach Hause gegangen.</small></span></figcaption></figure>
+      <figure class="zbay zcard"><svg viewBox="0 0 220 170" role="img" aria-label="Закрытая дверь с замком"><rect width="220" height="170" fill="#1B1B1B"/><path d="M0 142h220v28H0z" fill="#111"/><path d="M0 142h220" stroke="#3A3A3A" stroke-width="2"/><path d="M12 142V22a6 6 0 0 1 6-6h184a6 6 0 0 1 6 6v120" fill="none" stroke="#3A3A3A" stroke-width="3"/><rect x="64" y="30" width="92" height="112" rx="4" fill="#2A2A2A" stroke="#4C4C4C" stroke-width="3"/><path d="M64 66h92M64 104h92" stroke="#3A3A3A" stroke-width="3"/><g class="zb-k"><path d="M96 84V72a14 14 0 0 1 28 0v12" fill="none" stroke="#BDBDBD" stroke-width="6"/><rect x="88" y="82" width="44" height="34" rx="6" fill="#E5261A"/><circle cx="110" cy="96" r="4" fill="#0A0A0A"/><path d="M110 98v8" stroke="#0A0A0A" stroke-width="4" stroke-linecap="round"/></g></svg><figcaption><i>3</i><span>Результат<small lang="de">Die Tür ist geschlossen.</small></span></figcaption></figure>
+      <figure class="zbay zcard"><svg viewBox="0 0 220 170" role="img" aria-label="Анкета на планшете с галочкой"><rect width="220" height="170" fill="#1B1B1B"/><path d="M0 142h220v28H0z" fill="#111"/><path d="M0 142h220" stroke="#3A3A3A" stroke-width="2"/><path d="M12 142V22a6 6 0 0 1 6-6h184a6 6 0 0 1 6 6v120" fill="none" stroke="#3A3A3A" stroke-width="3"/><rect x="64" y="26" width="92" height="116" rx="7" fill="#F4F4F4"/><rect x="88" y="19" width="44" height="16" rx="4" fill="#7D8B9C"/><path d="M78 56h64M78 74h64M78 92h40" stroke="#BDBDBD" stroke-width="6" stroke-linecap="round"/><g class="zb-m"><circle cx="138" cy="116" r="16" fill="#E5261A"/><path d="m130 116 6 6 10-11" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g></svg><figcaption><i>4</i><span>Надо или можно<small lang="de">sein + zu + Infinitiv</small></span></figcaption></figure>
+      <figure class="zbay zcard"><svg viewBox="0 0 220 170" role="img" aria-label="Реплика в разговоре"><rect width="220" height="170" fill="#1B1B1B"/><path d="M0 142h220v28H0z" fill="#111"/><path d="M0 142h220" stroke="#3A3A3A" stroke-width="2"/><path d="M12 142V22a6 6 0 0 1 6-6h184a6 6 0 0 1 6 6v120" fill="none" stroke="#3A3A3A" stroke-width="3"/><g class="zb-b"><path d="M46 36h128a12 12 0 0 1 12 12v56a12 12 0 0 1-12 12h-74l-26 22v-22H46a12 12 0 0 1-12-12V48a12 12 0 0 1 12-12z" fill="#F4F4F4"/><g fill="#E5261A"><circle cx="86" cy="76" r="8"/><circle cx="110" cy="76" r="8"/><circle cx="134" cy="76" r="8"/></g></g></svg><figcaption><i>5</i><span>Устойчивые фразы<small lang="de">Das ist mir egal.</small></span></figcaption></figure>
+    </div>
+<!--/vz-->
     <div class="two">
       <div class="gcard rv">
         <h3 class="h3">Работает сам</h3>
@@ -954,6 +1023,24 @@ body{letter-spacing:-.022em;font-size:16px}
       <button class="card-w rv" data-t="4"><svg class="ic ne"><use href="#i-arrow"/></svg><h3 class="h3">Этап 3: Futur</h3><ul class="bul"><li>werden меняется</li><li>sein отдыхает в конце</li><li>Futur II почти не нужен</li></ul></button>
     </div>
 
+
+
+
+
+
+<!--vz-->
+    <div class="zlane" id="zLane"><svg viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true"><rect width="1000" height="300" fill="#141414"/><g stroke="#3A3A3A" stroke-width="3"><path d="M0 8H1000" vector-effect="non-scaling-stroke"/><path d="M0 292H1000" vector-effect="non-scaling-stroke"/></g></svg>
+      <div class="zl-in">
+        <div class="zl-h" aria-hidden="true"><span>Время</span><span></span><span>Второе место</span><span></span><span>Хвост фразы</span></div>
+        <div class="zl-r"><span class="tn" lang="de">Präsens</span><span class="zs" lang="de">ich</span><span class="zs v" lang="de">bin</span><span class="zs d" aria-hidden="true">…</span><span class="zs d" aria-hidden="true"></span></div>
+        <div class="zl-r"><span class="tn" lang="de">Präteritum</span><span class="zs" lang="de">ich</span><span class="zs v" lang="de">war</span><span class="zs d" aria-hidden="true">…</span><span class="zs d" aria-hidden="true"></span></div>
+        <div class="zl-r"><span class="tn" lang="de">Perfekt</span><span class="zs" lang="de">ich</span><span class="zs v" lang="de">bin</span><span class="zs d" aria-hidden="true">…</span><span class="zs e" lang="de">gewesen</span></div>
+        <div class="zl-r"><span class="tn" lang="de">Futur I</span><span class="zs" lang="de">ich</span><span class="zs v" lang="de">werde</span><span class="zs d" aria-hidden="true">…</span><span class="zs e" lang="de">sein</span></div>
+      </div>
+      <p class="zl-cap">На втором месте форма меняется. <span lang="de">gewesen</span> уходит в&nbsp;конец, <span lang="de">sein</span> отдыхает в&nbsp;конце.</p>
+    </div>
+<!--/vz-->
+
     <div class="rows2">
       <div class="row2 rv"><div class="r2-pic"><img class="r2-car" src="media/car-top-up.webp" alt="" width="260" height="505"><img class="r2-b" src="media/3d-clock.webp" alt="" width="70" height="70"></div><div class="ex"><button class="say" data-say="Ich war zu Hause." aria-label="Послушать"></button><div><span class="de" lang="de">Ich war zu Hause.</span><span class="ru">Я был дома. Коротко, так и говорят.</span></div></div></div>
       <div class="row2 rv"><div class="r2-pic"><img class="r2-car" src="media/car-top-up.webp" alt="" width="260" height="505"><img class="r2-b" src="media/3d-tag.webp" alt="" width="70" height="70"></div><div class="ex"><button class="say" data-say="Ich bin zu Hause gewesen." aria-label="Послушать"></button><div><span class="de" lang="de">Ich bin zu Hause gewesen.</span><span class="ru">Я был дома. Тоже верно, но длиннее.</span></div></div></div>
@@ -1018,6 +1105,25 @@ body{letter-spacing:-.022em;font-size:16px}
       <article class="err"><div class="pic"><img src="media/3d-people.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Вы как они</h3><span class="bad" lang="de">Ihr sind spät dran.</span><div class="ex"><button class="say" data-say="Ihr seid spät dran." aria-label="Послушать"></button><div><span class="de" lang="de">Ihr seid spät dran.</span><span class="ru">Вы опаздываете.</span></div></div></div></article>
       <article class="err blackc"><div class="bc-top"><h3>6 <svg class="ic"><use href="#i-star"/></svg> вопросов</h3><a class="lnk" href="#quiz">Все ответы<svg class="ic"><use href="#i-arrow"/></svg></a></div><p>Узнаёшь себя в трёх пунктах? Тест пройдёт веселее.</p><a class="btn" href="#quiz">Проверить себя</a><div class="bc-car" data-car="silver flip"></div></article>
     </div>
+<!--vz-->
+    <div class="zcold" id="zCold">
+      <figure class="zcard"><svg viewBox="0 0 520 300" role="img" aria-label="Человек вморожен в ледяную глыбу">
+<rect width="520" height="300" fill="#E8EEF2"/><rect y="250" width="520" height="50" fill="#D7DEE3"/>
+<g fill="none" stroke="#9DBBD0" stroke-width="3" stroke-linecap="round"><path class="zk-s" d="M78 62v28M64 76h28M68 66l20 20M88 66 68 86"/><path class="zk-s" d="M432 96v24M420 108h24M423 99l18 18M441 99l-18 18"/><path class="zk-s" d="M452 200v18M443 209h18"/></g>
+<g id="zkIce"><rect x="166" y="38" width="188" height="214" rx="18" fill="#CFE3EE" stroke="#9DBBD0" stroke-width="3"/>
+<circle cx="260" cy="92" r="30" fill="#8FAEC4"/><path d="M212 252c2-58 22-96 48-96s46 38 48 96z" fill="#8FAEC4"/>
+<path d="M186 60l34-16M186 96l18-9M322 200l20-9" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+</g></svg><figcaption><s lang="de">Ich bin kalt.</s><span>Я холодный человек.</span></figcaption></figure>
+      <figure class="zcard"><svg viewBox="0 0 520 300" role="img" aria-label="Человек мёрзнет у сломанной батареи, за окном снег">
+<rect width="520" height="300" fill="#F4F0EA"/><rect y="250" width="520" height="50" fill="#E1DBD0"/>
+<rect x="48" y="36" width="170" height="150" rx="6" fill="#CFE3EE" stroke="#BDBDBD" stroke-width="4"/><path d="M133 36v150M48 111h170" stroke="#BDBDBD" stroke-width="4"/>
+<g fill="#fff"><circle class="zk-f" cx="74" cy="60" r="5"/><circle class="zk-f" cx="108" cy="92" r="4"/><circle class="zk-f" cx="160" cy="66" r="5"/><circle class="zk-f" cx="196" cy="102" r="4"/><circle class="zk-f" cx="86" cy="142" r="5"/><circle class="zk-f" cx="178" cy="152" r="5"/></g>
+<rect x="290" y="170" width="170" height="78" rx="8" fill="#C5CBD1"/><g stroke="#ABB2B9" stroke-width="10" stroke-linecap="round"><path d="M314 182v54M342 182v54M370 182v54M398 182v54M426 182v54"/></g><path d="M446 248v16M304 248v16" stroke="#ABB2B9" stroke-width="8"/>
+<g id="zkMan"><circle cx="250" cy="118" r="26" fill="#E5B79A"/><path d="M206 250c2-58 18-98 44-98s42 40 44 98z" fill="#111"/><path d="M224 146c14 10 38 10 52 0v14c-14 10-38 10-52 0z" fill="#E5261A"/><circle cx="240" cy="116" r="3.500" fill="#3A3A3A"/><circle cx="260" cy="116" r="3.500" fill="#3A3A3A"/><path d="M238 133l5-4 4 4 4-4 4 4 5-4 4 4" stroke="#3A3A3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M226 106a24 24 0 0 1 48 0z" fill="#E5261A"/></g>
+<g id="zkT"><rect x="474" y="60" width="16" height="118" rx="8" fill="#fff" stroke="#BDBDBD" stroke-width="3"/><circle cx="482" cy="178" r="14" fill="#E5261A"/><rect x="478" y="140" width="8" height="30" fill="#E5261A"/></g>
+</svg><figcaption><b lang="de">Mir ist kalt.</b><span>Мне холодно.</span></figcaption></figure>
+    </div>
+<!--/vz-->
   </div>
 </section>
 
@@ -1056,6 +1162,30 @@ body{letter-spacing:-.022em;font-size:16px}
         <div class="ex"><button class="say" data-say="Sie meint, es sei zu spät." aria-label="Послушать"></button><div><span class="de" lang="de">Sie meint, es sei zu spät.</span><span class="ru">Она считает, что уже поздно.</span></div></div>
       </div>
     </div>
+
+
+
+
+
+
+<!--vz-->
+    <div class="zzu" id="zZu">
+      <figure class="zcard"><svg viewBox="0 0 520 220" role="img" aria-label="Анкета с полями на планшете, рядом листок календаря с пятницей">
+<rect width="520" height="220" fill="#1B1B1B"/>
+<rect x="156" y="28" width="172" height="176" rx="10" fill="#F4F4F4"/><rect x="208" y="16" width="68" height="24" rx="6" fill="#7D8B9C"/>
+<g fill="#D8D8D8"><rect x="178" y="60" width="128" height="16" rx="4"/><rect x="178" y="88" width="128" height="16" rx="4"/><rect x="178" y="116" width="86" height="16" rx="4"/></g>
+<g fill="#E5261A"><rect x="184" y="65" width="74" height="6" rx="3"/><rect x="184" y="93" width="48" height="6" rx="3"/></g>
+<g id="zzP"><path d="M300 178l6-18 44-44 12 12-44 44z" fill="#E5261A"/><path d="M300 178l6-18 12 12z" fill="#111"/></g>
+<g id="zzC"><rect x="372" y="44" width="96" height="112" rx="8" fill="#F4F4F4"/><rect x="372" y="44" width="96" height="30" rx="8" fill="#E5261A"/><g fill="#BDBDBD"><circle cx="396" cy="96" r="6"/><circle cx="420" cy="96" r="6"/><circle cx="444" cy="96" r="6"/><circle cx="396" cy="122" r="6"/><circle cx="444" cy="122" r="6"/></g><circle cx="420" cy="122" r="12" fill="#E5261A"/></g>
+</svg><figcaption><span class="tg">Нужно</span><p lang="de">Das Formular <i>ist</i> bis Freitag aus<i>zu</i>füllen.</p><span class="zru">Анкету нужно заполнить до пятницы.</span></figcaption></figure>
+      <figure class="zcard"><svg viewBox="0 0 520 220" role="img" aria-label="Гаечный ключ откручивает проблему, шестерня разобрана">
+<rect width="520" height="220" fill="#1B1B1B"/>
+<g id="zzG"><path d="M210 54a56 56 0 1 0 100 0l14-4-6-22-16 2a56 56 0 0 0-14-14l6-14-20-10-8 14a60 60 0 0 0-20 0l-8-14-20 10 6 14a56 56 0 0 0-14 14l-16-2-6 22 14 4z" transform="translate(0 66)" fill="#7D8B9C"/><circle cx="260" cy="128" r="34" fill="#1B1B1B"/><circle cx="260" cy="128" r="16" fill="#E5261A"/></g>
+<g id="zzW"><path d="M60 170l92-92a26 26 0 0 1 30-30l-20 20 8 16 16 8 20-20a26 26 0 0 1-30 30l-92 92a20 20 0 0 1-24-24z" fill="#F4F4F4"/></g>
+<g><circle cx="414" cy="110" r="56" fill="#E5261A"/><path d="m386 110 20 20 36-40" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg><figcaption><span class="tg g">Можно</span><p lang="de">Das Problem <i>ist</i> <i>zu</i> lösen.</p><span class="zru">Проблему можно решить.</span></figcaption></figure>
+    </div>
+<!--/vz-->
 
     <details class="acc">
       <summary>Устойчивые фразы с sein<svg class="ic"><use href="#i-chev"/></svg></summary>
@@ -1112,6 +1242,16 @@ body{letter-spacing:-.022em;font-size:16px}
       <div class="scard rv"><div><h3 class="h3"><em>3 формы</em> на всю жизнь</h3><p lang="de">sein, war, gewesen</p><p>Из них собираются все времена.</p></div><div data-car="slice1" class="slice"></div></div>
       <div class="scard rv"><div><h3 class="h3"><em>5 работ</em> одного глагола</h3><p>Связка, прошедшее, результат, надо или можно, устойчивые фразы.</p></div><div data-car="slice2" class="slice"></div></div>
     </div>
+<!--vz-->
+    <div class="zv" id="zRt">
+      <div class="zrt">
+        <div class="zrc"><span lang="de">ich</span><span lang="de">du</span><span lang="de">er, sie, es</span><span lang="de">wir</span><span lang="de">ihr</span><span lang="de">sie, Sie</span></div>
+        <svg viewBox="0 0 100 300" preserveAspectRatio="none" role="img" aria-label="Линии от шести лиц к пяти формам. wir и sie, Sie ведут к sind"><path pathLength="1" d="M0 25C50 25 50 25 100 25" stroke="#111" stroke-width="3" vector-effect="non-scaling-stroke" fill="none"/><path pathLength="1" d="M0 75C50 75 50 75 100 75" stroke="#111" stroke-width="3" vector-effect="non-scaling-stroke" fill="none"/><path pathLength="1" d="M0 125C50 125 50 125 100 125" stroke="#111" stroke-width="3" vector-effect="non-scaling-stroke" fill="none"/><path pathLength="1" d="M0 175C50 175 50 175 100 175" stroke="#E5261A" stroke-width="3" vector-effect="non-scaling-stroke" fill="none"/><path pathLength="1" d="M0 225C50 225 50 225 100 225" stroke="#111" stroke-width="3" vector-effect="non-scaling-stroke" fill="none"/><path pathLength="1" d="M0 275C60 275 40 175 100 175" stroke="#E5261A" stroke-width="3" vector-effect="non-scaling-stroke" fill="none"/></svg>
+        <div class="zrc rgt"><span lang="de">bin</span><span lang="de">bist</span><span lang="de">ist</span><span class="hot" lang="de">sind</span><span lang="de">seid</span><span class="bl" aria-hidden="true"></span></div>
+      </div>
+      <p class="zrt-c"><b>Пять форм на шесть лиц.</b> <span lang="de">wir</span> и&nbsp;<span lang="de">sie</span> делят <span lang="de">sind.</span></p>
+    </div>
+<!--/vz-->
     <div class="cheat rv">
       <div class="cl"><span>Кто, где, откуда, сколько лет</span><svg class="ic"><use href="#i-arrow"/></svg><b lang="de">Ich bin 30 Jahre alt.</b></div>
       <div class="cl"><span>Уехал, встал, остался</span><svg class="ic"><use href="#i-arrow"/></svg><b lang="de">sein + Partizip II</b></div>
@@ -1595,6 +1735,20 @@ function xInit(){
   /* counters */
   $$('.count').forEach(function(el){ var to=+el.dataset.to, suf=el.dataset.suf||'', o={v:0}; G.to(o,{v:to,duration:1.4,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 92%',once:true},onUpdate:function(){ el.textContent=Math.round(o.v)+suf; }}); });
 
+/*vz*/
+  /* topic visuals: transforms only, final state is the markup */
+  (function(){
+    var OE=function(sel,fn,st){var e=$(sel);if(e)ScrollTrigger.create({trigger:e,start:st||'top 82%',once:true,onEnter:fn});};
+    G.from('#zBays .zbay',{y:34,duration:.65,ease:'power3.out',stagger:.09,scrollTrigger:{trigger:'#zBays',start:'top 86%',once:true}});
+    OE('#zBays',function(){G.from('.zb-c',{x:60,duration:1,ease:'power2.out',delay:.3});G.from('.zb-l',{x:40,scaleX:.3,duration:.7,stagger:.1,ease:'power2.out',delay:.6});G.from('.zb-k',{rotation:-16,transformOrigin:'50% 0%',duration:.5,ease:'back.out(3)',delay:.7});G.from('.zb-m',{scale:.3,transformOrigin:'50% 50%',duration:.5,ease:'back.out(3)',delay:.9});G.from('.zb-b',{scale:.7,transformOrigin:'30% 100%',duration:.5,ease:'back.out(2.4)',delay:1});});
+    G.from('#zLane .zs.v,#zLane .zs.e',{x:-46,duration:.55,ease:'back.out(1.8)',stagger:.08,scrollTrigger:{trigger:'#zLane',start:'top 80%',once:true}});
+    G.from('#zCold figure',{y:30,duration:.7,ease:'power3.out',stagger:.14,scrollTrigger:{trigger:'#zCold',start:'top 86%',once:true}});
+    OE('#zCold',function(){G.from('#zkIce',{y:-26,duration:.9,ease:'bounce.out',delay:.3});G.from('.zk-s',{scale:.3,rotation:90,transformOrigin:'50% 50%',duration:.7,stagger:.1,ease:'back.out(2)',delay:.4});G.fromTo('#zkMan',{x:-3},{x:3,duration:.08,yoyo:true,repeat:21,ease:'sine.inOut',delay:.8,onComplete:function(){G.set('#zkMan',{x:0});}});G.to('.zk-f',{y:28,duration:2.6,ease:'none',stagger:.2,repeat:1,yoyo:true,delay:.5});});
+    G.from('#zZu figure',{y:30,duration:.7,ease:'power3.out',stagger:.14,scrollTrigger:{trigger:'#zZu',start:'top 86%',once:true}});
+    OE('#zZu',function(){G.from('#zzP',{x:-36,y:30,duration:.8,ease:'power2.out',delay:.3});G.from('#zzC',{rotation:10,transformOrigin:'50% 0%',duration:.8,ease:'back.out(2)',delay:.5});G.from('#zzW',{rotation:-34,transformOrigin:'85% 15%',duration:.9,ease:'back.out(1.8)',delay:.4});G.from('#zzG',{rotation:-60,transformOrigin:'50% 50%',duration:1,ease:'power2.out',delay:.4});});
+    OE('#zRt',function(){var ps=$$('#zRt path');ps.forEach(function(p){p.style.strokeDasharray='1';});G.fromTo(ps,{strokeDashoffset:1},{strokeDashoffset:0,duration:.8,stagger:.1,ease:'power2.inOut'});G.from('#zRt .zrc span',{scale:.86,duration:.45,ease:'back.out(2)',stagger:.03});},'top 78%');
+  })();
+/*/vz*/
   function refresh(){ ScrollTrigger.refresh(); }
   addEventListener('load',refresh);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(refresh);
