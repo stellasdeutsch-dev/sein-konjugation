@@ -10,12 +10,23 @@
 <link rel="icon" href="media/logo.webp">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}</style>
 <title>Глагол sein без зубрёжки</title>
-<link rel="preload" href="assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
-<style>@font-face{font-family:'Bagel Fat One';font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/bagelfatone-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Onest';font-style:normal;font-weight:300 700;font-display:swap;src:url(assets/fonts/onest-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
-@font-face{font-family:'Onest';font-style:normal;font-weight:300 700;font-display:swap;src:url(assets/fonts/onest-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Rubik';font-style:normal;font-weight:800 900;font-display:swap;src:url(assets/fonts/rubik-cyrillic.woff2) format('woff2');unicode-range:U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
-@font-face{font-family:'Rubik';font-style:normal;font-weight:800 900;font-display:swap;src:url(assets/fonts/rubik-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+<link rel="preload" href="assets/fonts/intertight-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(assets/fonts/intertight-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Inter Tight';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(assets/fonts/intertight-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 </style>
 <script defer src="assets/gsap-bundle.min.js"></script>
 
@@ -26,7 +37,7 @@
   --w:#F4F4F4;--c:#FFFFFF;--ink:#111;--ink2:#4C4C4C;--wl:rgba(0,0,0,.1);
   --red:#E5261A;--red2:#C51D13;--redt:#FF4A3D;--redw:#D2211A;--steel:#7D8B9C;
   --gut:16px;--r:18px;--r2:44px;
-  --f:"Onest","Helvetica Neue",Arial,system-ui,sans-serif;
+  --f:"Inter Tight","Helvetica Neue",Arial,system-ui,sans-serif;
   --tread:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='44'%3E%3Cpath d='M0 26 36 4l36 22v13L36 17 0 39z' fill='%23171717'/%3E%3C/svg%3E");
   --facet:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 900' preserveAspectRatio='none'%3E%3Cpath fill='%230F0F0F' d='M0 0h520L0 520z'/%3E%3Cpath fill='%23121212' d='M1440 0H920l520 520z'/%3E%3Cpath fill='%230D0D0D' d='M0 900h460L0 480z'/%3E%3Cpath fill='%23101010' d='M1440 900H980l460-420z'/%3E%3C/svg%3E");
 }
@@ -548,6 +559,181 @@ html.no-tts .say{display:none}
 </head>
 <body>
 
+<style>
+/* v2: closer to the reference layout, photographic materials */
+body{letter-spacing:-.022em;font-size:16px}
+.dk,.hero{background:#060606 url(media/bg-studio.webp) center top/cover no-repeat}
+.dk#exercise{padding-top:96px}
+.h1,.h2{font-weight:300;letter-spacing:-.045em}
+.h1 b,.h2 b{font-weight:600}
+.h3{font-weight:550;letter-spacing:-.035em}
+.lede{font-size:16px;letter-spacing:-.025em;line-height:1.38}
+.btn{font-weight:550;letter-spacing:-.02em;font-size:14px}
+.lt{box-shadow:0 -1px 0 rgba(255,255,255,.04)}
+@media (min-width:1360px){
+  body{background:url(media/tread.webp) 6px 0/64px auto repeat-y,url(media/tread.webp) calc(100% - 6px) 0/64px auto repeat-y,#050505}
+}
+#laneCar{position:fixed;left:13px;top:76px;width:50px;z-index:30;pointer-events:none;display:none}
+#laneCar img{width:100%;height:auto;rotate:180deg}
+@media (min-width:1360px){#laneCar{display:block}}
+
+/* cars */
+.vcar{position:relative;width:100%;aspect-ratio:1660/530}
+.vcar>img:first-child{width:100%;height:100%}
+.vcar.flip{scale:-1 1}
+.vw{position:absolute;top:44.72%;width:16.27%;height:auto;aspect-ratio:1}
+.vw.l{left:18.62%}.vw.r{left:65.6%}
+
+/* centred mobile rhythm of the reference */
+@media (max-width:899px){
+  .hd{text-align:center;justify-items:center}
+  .hero-g{text-align:center}.hero .lede{margin-inline:auto}
+  .hero .cta{flex-direction:column;align-items:stretch;max-width:360px;margin-inline:auto}
+  .s-title{text-align:center}
+}
+
+/* hero */
+.hero{padding-top:130px}
+.hero-car{animation:none;max-width:1120px;margin:6px auto -34px}
+.routes{padding-top:0}
+@media (max-width:899px){.hero-car{margin:18px auto -22px}}
+
+/* story */
+.bigwheel{width:min(520px,100%);margin:30px 0 -190px -70px}
+.bigwheel img{width:100%;height:auto}
+.s-title i{background:#EFEFEF;border-radius:.22em}
+.s-title i img{width:72%;height:auto}
+.t-wrap{position:relative;padding-top:42px}
+.t-stars{position:absolute;right:26px;top:0;display:flex;gap:7px;font-size:27px;color:#3A3A3A}
+.t-stars .ic.on{color:var(--red)}
+.tablet{background:#121212 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23262626'/%3E%3C/svg%3E");transform:perspective(1400px) rotateY(-5deg) rotateX(2deg);rotate:3deg;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.t-body p{transition:color .3s}
+.t-body p.dim{color:#7E7E7E}
+.t-body .de{color:inherit}
+@media (max-width:899px){.tablet{transform:none;rotate:0deg}.t-stars{left:50%;right:auto;translate:-50% 0}}
+
+/* sticky scroll scenes */
+.pinw{position:relative}
+#parkW{height:250vh}
+#gateW{height:280vh;margin-bottom:14px}
+.pin{position:sticky;top:76px}
+@media (prefers-reduced-motion:reduce){#parkW,#gateW{height:auto}.pin{position:static}}
+.park{background:#070707 url(media/tread.webp) center/220px auto;position:relative}
+.park:before{content:"";position:absolute;inset:0;background:rgba(5,5,5,.72)}
+.park>*{position:relative}
+.pcar{width:128px}
+.pcar img{width:100%;height:auto}
+.pcar span{color:#fff;font-size:17px}
+.pslot{border:2.500px solid #8A8A8A;border-right-color:transparent}
+.pslot.need{border-color:var(--redt);border-right-color:transparent}
+.plane{background:rgba(26,26,26,.86)}
+@media (max-width:759px){.pcar{width:84px}.pcar span{font-size:13px}}
+
+/* gate */
+.gate{background:#070707;color:#fff;border-radius:28px;padding:26px;overflow:hidden}
+.g-top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:6px 22px;margin-bottom:16px}
+.g-now{font-size:clamp(26px,3vw,40px);letter-spacing:-.05em;font-weight:300;color:#D8D8D8}
+.g-now b{font-weight:650;color:var(--redt)}
+.g-road{position:relative;height:150px;border-radius:18px;background:#1a1a1a url(media/tread.webp) center/190px auto;overflow:hidden}
+.g-road:before{content:"";position:absolute;inset:0;background:rgba(6,6,6,.7)}
+.g-car{position:absolute;top:40px;left:0;width:150px;z-index:2}
+.g-car img{width:100%;height:auto}
+.g-car span{position:absolute;inset:50% 0 auto;translate:0 -50%;text-align:center;font-weight:700;letter-spacing:-.03em;font-size:17px}
+.g-post{position:absolute;left:50%;top:18px;bottom:18px;width:14px;z-index:3}
+.g-post:before{content:"";position:absolute;left:0;bottom:0;width:14px;height:14px;border-radius:50%;background:#fff}
+.g-post i{position:absolute;left:6px;bottom:6px;width:3px;height:0}
+#gArm{width:8px;height:112px;left:3px;bottom:7px;background:repeating-linear-gradient(0deg,#fff 0 14px,var(--red) 14px 28px);border-radius:4px;transform-origin:50% 100%}
+.g-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:12px}
+.g-r{background:#1A1A1A;border-radius:14px;padding:11px 12px;text-align:left;transition:background .25s,translate .25s;min-width:0}
+.g-r:hover{background:#2C2C2C;translate:0 -2px}
+.g-r small{display:block;font-size:13px;color:#BDBDBD;line-height:1.15}
+.g-r b{font-size:22px;font-weight:600;letter-spacing:-.04em;color:#6A6A6A;transition:color .25s}
+.g-r.on b{color:var(--redt)}
+@media (max-width:759px){.gate{padding:16px;border-radius:22px}.g-list{grid-template-columns:repeat(3,minmax(0,1fr))}.g-road{height:120px}.g-car{width:104px;top:33px}.g-car span{font-size:14px}#gArm{height:86px}.g-post{top:12px;bottom:12px}}
+
+/* feature cards */
+.gcard{padding-bottom:0;overflow:hidden;display:flex;flex-direction:column}
+.gc-car{margin:18px auto 0;width:min(460px,92%)}
+.gc-btn{align-self:center;margin:-22px 0 22px;position:relative;z-index:2}
+.link3:before{transform:scaleX(var(--ln,1));transform-origin:0 50%}
+
+/* franken */
+.fk-c{position:relative;aspect-ratio:1660/530;width:min(980px,100%);margin:0 auto}
+.fkp{position:absolute;inset:0}
+.fkp.a{clip-path:inset(-20% 59% -20% -20%)}
+.fkp.b{clip-path:inset(-20% 34% -20% 41%)}
+.fkp.c{clip-path:inset(-20% -20% -20% 66%)}
+.fk{overflow:hidden}
+
+/* compare rows and endings */
+.rows2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.row2{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:center;background:#fff;border-radius:20px;padding:12px 18px 12px 12px;transition:translate .25s,box-shadow .25s}
+.row2:hover{translate:0 -3px;box-shadow:0 14px 30px rgba(0,0,0,.08)}
+.r2-pic{position:relative;height:96px;display:grid;place-items:center;background:#F0F0F0;border-radius:14px;overflow:visible}
+.r2-car{height:88px;width:auto}
+.r2-b{position:absolute;left:-6px;top:-6px;width:42px;height:42px;rotate:-10deg}
+.row2 .say{background:#E8E8E8;color:#111}
+.row2 .ru{color:var(--ink2)}
+.wb{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;margin:12px 0 0;background:#fff;border-radius:20px;padding:16px}
+.wb span{display:flex;align-items:baseline;gap:7px;font-size:clamp(23px,2.6vw,32px);letter-spacing:-.045em}
+.wb small{font-size:14px;color:var(--ink2);letter-spacing:-.02em}
+.wb b{font-weight:600}
+.wb i{font-style:normal;font-weight:600;color:var(--redw);display:inline-block;margin-left:-7px}
+@media (max-width:759px){.rows2{grid-template-columns:1fr}}
+
+/* duo */
+.duo{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:18px;align-items:end;margin-top:48px}
+.duo .btn{margin-bottom:12%}
+@media (max-width:759px){.duo{grid-template-columns:1fr 1fr}.duo .btn{grid-column:1/-1;grid-row:2;justify-self:center;margin:0}}
+
+/* errors */
+.err{position:relative;overflow:hidden;background:#fff}
+.err .pic{background:#EFEFEF}
+.err .pic{height:96px;min-height:0;align-self:center}
+.err .pic img{width:auto;height:76%}
+.rcar{height:auto;top:2px;width:104px}
+.scan{position:absolute;top:0;bottom:0;width:2px;background:var(--red);left:-4px;pointer-events:none}
+.stamp{position:absolute;right:14px;top:12px;display:inline-flex;align-items:center;min-height:26px;padding:0 10px;border-radius:7px;box-shadow:inset 0 0 0 1.5px var(--ink);font-size:12px;font-weight:600;letter-spacing:-.01em;line-height:1;rotate:5deg;hyphens:manual}
+.err.blackc{overflow:hidden;align-content:start;background:#090909;min-height:230px}
+.bc-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.bc-top h3{margin:0;font-size:29px;font-weight:300;letter-spacing:-.045em;display:flex;align-items:center;gap:8px;color:#fff}
+.bc-top h3 .ic{color:var(--red);font-size:22px}
+.err.blackc p{margin-top:8px;max-width:330px}
+.bc-car{position:absolute;right:-70px;bottom:-18px;width:360px}
+.err.blackc>.btn{position:relative;z-index:2}
+@media (max-width:440px){.bc-car{width:250px;right:-60px;bottom:-12px}.err.blackc{min-height:250px}}
+
+/* exercise tag */
+.hang{height:640px}
+.hang-car{position:absolute;left:-6%;right:-6%;bottom:0}
+.swing{z-index:2}
+.ctag{background:#141414}
+.ctag .vcar{margin-top:14px}
+
+/* quiz */
+.quiz{background:#050505}
+.qtrack{position:absolute;top:0;bottom:0;width:150px;background:url(media/tread.webp) center 0/150px auto repeat-y}
+.qtrack.l{left:max(calc(50% - 620px),8px)}
+.qtrack.r{right:max(calc(50% - 620px),8px)}
+.qside{rotate:0deg;width:100px;height:auto;margin-top:-97px}
+.qside.l{left:calc(max(calc(50% - 620px),8px) + 25px)}
+.qside.r{right:calc(max(calc(50% - 620px),8px) + 25px);rotate:180deg}
+@media (max-width:1140px){.qtrack,.qside{display:none}}
+
+/* summary car across three cards */
+.scard{min-height:300px}
+.slice{overflow:hidden;width:100%}
+.slw{width:300%}
+.slw.s1{margin-left:-100%}.slw.s2{margin-left:-200%}
+@media (max-width:899px){.sum3 .scard:not(:first-child) .slice{display:none}.slw.s0{width:100%}.scard{min-height:0}}
+
+/* finale chips */
+.fin4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:6px}
+.fin4 .lchip{background:#fff;border-color:var(--wl)}
+@media (max-width:759px){.fin4{grid-template-columns:1fr 1fr}}
+.scene .vcar{max-width:100%}
+.tool{right:43%;top:-6%}
+</style>
 <svg style="position:absolute;width:0;height:0" aria-hidden="true"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6"/><path d="M8.5 6H18v9.5"/></symbol>
 <symbol id="i-say" viewBox="0 0 24 24"><path d="M4 9.5v5h3.6L12.5 19V5L7.6 9.5H4z" fill="currentColor"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6"/><path d="M18.3 6.4a8 8 0 0 1 0 11.2"/></symbol>
 <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"/><path d="M12 7v5.4l3.4 2"/></symbol>
@@ -598,6 +784,7 @@ html.no-tts .say{display:none}
   <div class="bar" id="bar"></div>
 </header>
 
+<div id="laneCar" aria-hidden="true"><img src="media/car-top-up.webp" alt="" width="260" height="505"></div>
 <main>
 <section class="hero" id="hero">
   <div class="wrap">
@@ -615,7 +802,7 @@ html.no-tts .say{display:none}
         <div><svg class="ic"><use href="#i-coin"/></svg>Бесплатно и без предоплаты</div>
       </div>
     </div>
-    <div class="hero-car" data-car="side" data-spin="1"></div>
+    <div class="hero-car" data-car="dark" data-spin="1" id="heroCar"></div>
     <div class="routes">
       <a class="rcard" href="#story"><p>Как одно слово оставило меня без отопления</p><span class="lnk">История<svg class="ic"><use href="#i-arrow"/></svg></span></a>
       <a class="rcard" href="#what"><p>Глагол, которого нет в русском</p><span class="lnk">Что это<svg class="ic"><use href="#i-arrow"/></svg></span></a>
@@ -633,10 +820,10 @@ html.no-tts .say{display:none}
 <section class="dk" id="story">
   <div class="wrap story-g">
     <div class="story-t">
-      <h2 class="s-title">Отзыв клиента<i><svg class="ic"><use href="#i-heart"/></svg></i></h2>
-      <div class="bigwheel" data-car="wheel" aria-hidden="true"></div>
+      <h2 class="s-title">Отзыв клиента<i><img src="media/3d-heart.webp" alt="" width="80" height="80"></i></h2>
+      <div class="bigwheel" aria-hidden="true"><img src="media/wheel.webp" alt="" width="900" height="900"></div>
     </div>
-    <article class="tablet rv">
+    <div class="t-wrap"><div class="t-stars" aria-hidden="true"><svg class="ic on"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div><article class="tablet rv">
       <div class="t-top">
         <img src="media/logo.webp" alt="" width="64" height="64">
         <div><b>Шынгыс</b><div class="stars" aria-label="Одна звезда из пяти"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div></div>
@@ -660,7 +847,7 @@ html.no-tts .say{display:none}
         <div><span><s lang="de" class="de">Ich bin kalt.</s><small>Я холодный человек.</small></span><button class="say" data-say="Ich bin kalt." aria-label="Послушать"></button></div>
         <div><span><b lang="de" class="de">Mir ist kalt.</b><small>Мне холодно.</small></span><button class="say" data-say="Mir ist kalt." aria-label="Послушать"></button></div>
       </div>
-    </article>
+    </article></div>
   </div>
 </section>
 
@@ -671,20 +858,20 @@ html.no-tts .say{display:none}
       <h2 class="h2"><b lang="de">sein</b> это глагол быть. Русский его <b>спрятал</b></h2>
       <p class="lede">Мы говорим: я учитель. Глагола нет. Пусто. В немецком пустое место <b>не прокатит</b>. Там обязательно кто-то стоит. И стоит он на втором месте.</p>
     </div>
-    <div class="park rv" id="park">
+    <div class="pinw" id="parkW"><div class="pin"><div class="park" id="park">
       <div class="park-steps" id="pSteps">
         <span class="on"><i>1</i>По-русски пусто</span><span><i>2</i>По-немецки так нельзя</span><span><i>3</i>Заезжает sein</span><span><i>4</i>Фраза оформлена</span>
       </div>
       <div class="pstage" id="pStage">
         <div class="plane"><small>По-русски</small><div class="pwords"><span id="pR1">Я</span><span class="pslot">пусто</span><span id="pR2">учитель</span></div></div>
         <div class="plane"><small>По-немецки</small><div class="pwords" lang="de"><span id="pD1">Ich</span><span class="pslot" id="pSlot"></span><span id="pD2">Lehrer</span></div></div>
-        <div class="pcar" id="pCar"><div data-car="top white"></div><span id="pV" lang="de">bin</span></div>
+        <div class="pcar" id="pCar"><img src="media/car-top.webp" alt="" width="420" height="216"><span id="pV" lang="de">bin</span></div>
       </div>
       <div class="ppair">
         <div class="ex"><button class="say" id="pSay" data-say="Ich bin Lehrer." aria-label="Послушать"></button><div><span class="de" lang="de" id="pS">Ich bin Lehrer.</span><span class="ru" id="pT">Я учитель.</span></div></div>
         <div class="tchips" id="pEx"><button class="tchip on">bin</button><button class="tchip">ist</button><button class="tchip">sind</button></div>
       </div>
-    </div>
+    </div></div></div>
   </div>
 </section>
 
@@ -711,6 +898,8 @@ html.no-tts .say{display:none}
           <button class="mode" data-m="time">Который час</button>
           <button class="mode" data-m="from">Откуда</button>
         </div>
+        <div class="gc-car" data-car="silver" data-spin="1"></div>
+        <a class="btn gc-btn" href="#bld">Собрать фразу</a>
       </div>
       <div class="gcard rv">
         <h3 class="h3">Помогает другим</h3>
@@ -721,6 +910,8 @@ html.no-tts .say{display:none}
           <button class="mode" data-m="zu">Надо или можно</button>
           <button class="mode" data-m="idiom">Устойчивая фраза</button>
         </div>
+        <div class="gc-car" data-car="dark flip" data-spin="1"></div>
+        <a class="btn gc-btn" href="#bld">Посмотреть работу</a>
       </div>
     </div>
     <div class="bld rv" id="bld">
@@ -742,13 +933,19 @@ html.no-tts .say{display:none}
       <p class="lede">Обычный глагол: одна основа, меняешь окончания. Тут кузов от одного, двери от другого, багажник от третьего. Поэтому <span lang="de">bin</span> и <span lang="de">war</span> даже не похожи.</p>
     </div>
     <div class="fk" id="fk">
-      <div data-car="franken"></div>
+      <div class="fk-c"><div class="fkp a" data-car="red"></div><div class="fkp b" data-car="dark"></div><div class="fkp c" data-car="steel"></div></div>
       <div class="fk-l">
         <div><h4><i style="background:var(--red)"></i>Основа с b</h4><div class="fk-w" lang="de"><button data-say="bin">bin</button><button data-say="bist">bist</button></div></div>
         <div><h4><i style="background:#111"></i>Основа с s</h4><div class="fk-w" lang="de"><button data-say="ist">ist</button><button data-say="sind">sind</button><button data-say="seid">seid</button><button data-say="sein">sein</button></div></div>
         <div><h4><i style="background:var(--steel)"></i>Основа с w</h4><div class="fk-w" lang="de"><button data-say="war">war</button><button data-say="gewesen">gewesen</button></div></div>
       </div>
     </div>
+
+    <div class="pinw" id="gateW"><div class="pin"><div class="gate" id="gate">
+      <div class="g-top"><h3 class="h3">Местоимение подъезжает. Шлагбаум выдаёт форму</h3><p class="g-now" lang="de"><span id="gNowP">ich</span> <b id="gNow">bin</b></p></div>
+      <div class="g-road"><div class="g-car" id="gCar"><img src="media/car-top.webp" alt="" width="420" height="216"><span id="gP" lang="de">ich</span></div><div class="g-post"><i id="gArm"></i></div></div>
+      <div class="g-list" id="gList" lang="de"></div>
+    </div></div></div>
 
     <div class="cards4" id="stages">
       <button class="card-w rv" data-t="0"><svg class="ic ne"><use href="#i-arrow"/></svg><h3 class="h3">Этап 0: Präsens</h3><ul class="bul"><li>Пять форм на шесть лиц</li><li>wir и sie делят sind</li><li>Логики нет. Есть память</li></ul></button>
@@ -757,9 +954,15 @@ html.no-tts .say{display:none}
       <button class="card-w rv" data-t="4"><svg class="ic ne"><use href="#i-arrow"/></svg><h3 class="h3">Этап 3: Futur</h3><ul class="bul"><li>werden меняется</li><li>sein отдыхает в конце</li><li>Futur II почти не нужен</li></ul></button>
     </div>
 
+    <div class="rows2">
+      <div class="row2 rv"><div class="r2-pic"><img class="r2-car" src="media/car-top-up.webp" alt="" width="260" height="505"><img class="r2-b" src="media/3d-clock.webp" alt="" width="70" height="70"></div><div class="ex"><button class="say" data-say="Ich war zu Hause." aria-label="Послушать"></button><div><span class="de" lang="de">Ich war zu Hause.</span><span class="ru">Я был дома. Коротко, так и говорят.</span></div></div></div>
+      <div class="row2 rv"><div class="r2-pic"><img class="r2-car" src="media/car-top-up.webp" alt="" width="260" height="505"><img class="r2-b" src="media/3d-tag.webp" alt="" width="70" height="70"></div><div class="ex"><button class="say" data-say="Ich bin zu Hause gewesen." aria-label="Послушать"></button><div><span class="de" lang="de">Ich bin zu Hause gewesen.</span><span class="ru">Я был дома. Тоже верно, но длиннее.</span></div></div></div>
+    </div>
+    <div class="wb rv" id="wb" lang="de"><span><small>du</small><b>war</b><i>st</i></span><span><small>wir</small><b>war</b><i>en</i></span><span><small>ihr</small><b>war</b><i>t</i></span></div>
+
     <div class="dash rv" id="dash">
       <div class="tchips" id="tChips"></div>
-      <div class="road" id="road"><div class="rcar" id="rCar" data-car="top white"></div><div class="rl"><span>давно</span><span>было</span><span>сейчас</span><span>будет</span></div></div>
+      <div class="road" id="road"><img class="rcar" id="rCar" src="media/car-top.webp" alt="" width="420" height="216"><div class="rl"><span>давно</span><span>было</span><span>сейчас</span><span>будет</span></div></div>
       <p class="dash-note" id="dNote"></p>
       <div class="ftab" id="fTab" lang="de"></div>
     </div>
@@ -794,6 +997,7 @@ html.no-tts .say{display:none}
         </div>
       </div>
     </div>
+    <div class="duo" id="duo"><div class="d-l" data-car="silver" data-spin="1"></div><a class="btn" href="#errors">Дальше к ошибкам</a><div class="d-r" data-car="red flip" data-spin="1"></div></div>
   </div>
 </section>
 
@@ -805,14 +1009,14 @@ html.no-tts .say{display:none}
       <p class="lede">Семь мест. Все понятные. Русский в голове подсказывает, немецкий не принимает.</p>
     </div>
     <div class="errs" id="errs">
-      <article class="err"><div class="pic"><svg class="ic"><use href="#i-gap"/></svg></div><div><h3>Пустое место</h3><span class="bad" lang="de">Sie Ärztin.</span><div class="ex"><button class="say" data-say="Sie ist Ärztin." aria-label="Послушать"></button><div><span class="de" lang="de">Sie ist Ärztin.</span><span class="ru">Она врач.</span></div></div></div></article>
-      <article class="err"><div class="pic"><svg class="ic"><use href="#i-cal"/></svg></div><div><h3>Возраст как вещь</h3><span class="bad" lang="de">Ich habe 30 Jahre.</span><div class="ex"><button class="say" data-say="Ich bin 30 Jahre alt." aria-label="Послушать"></button><div><span class="de" lang="de">Ich bin 30 Jahre alt.</span><span class="ru">Мне 30 лет.</span></div></div></div></article>
-      <article class="err"><div class="pic"><svg class="ic"><use href="#i-thermo"/></svg></div><div><h3>Холод от первого лица</h3><span class="bad" lang="de">Ich bin kalt.</span><div class="ex"><button class="say" data-say="Mir ist kalt." aria-label="Послушать"></button><div><span class="de" lang="de">Mir ist kalt.</span><span class="ru">Мне холодно.</span></div></div></div></article>
-      <article class="err"><div class="pic"><svg class="ic"><use href="#i-steps"/></svg></div><div><h3>Движение через haben</h3><span class="bad" lang="de">Ich habe gegangen.</span><div class="ex"><button class="say" data-say="Ich bin gegangen." aria-label="Послушать"></button><div><span class="de" lang="de">Ich bin gegangen.</span><span class="ru">Я ушёл.</span></div></div></div></article>
-      <article class="err"><div class="pic"><svg class="ic"><use href="#i-tag"/></svg></div><div><h3>Винительный после sein</h3><span class="bad" lang="de">Das ist meinen Bruder.</span><div class="ex"><button class="say" data-say="Das ist mein Bruder." aria-label="Послушать"></button><div><span class="de" lang="de">Das ist mein Bruder.</span><span class="ru">Это мой брат.</span></div></div></div></article>
-      <article class="err"><div class="pic"><svg class="ic"><use href="#i-mega"/></svg></div><div><h3>Просьба через bist</h3><span class="bad" lang="de">Bist ruhig!</span><div class="ex"><button class="say" data-say="Sei ruhig!" aria-label="Послушать"></button><div><span class="de" lang="de">Sei ruhig!</span><span class="ru">Успокойся!</span></div></div></div></article>
-      <article class="err"><div class="pic"><svg class="ic"><use href="#i-people"/></svg></div><div><h3>Вы как они</h3><span class="bad" lang="de">Ihr sind spät dran.</span><div class="ex"><button class="say" data-say="Ihr seid spät dran." aria-label="Послушать"></button><div><span class="de" lang="de">Ihr seid spät dran.</span><span class="ru">Вы опаздываете.</span></div></div></div></article>
-      <article class="err blackc"><div><h3 class="h3">Узнаёшь себя в трёх пунктах?</h3><p>Отлично. Значит, тест ниже пройдёт веселее.</p></div><a class="btn" href="#quiz">Проверить себя</a></article>
+      <article class="err"><div class="pic"><img src="media/3d-gap.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Пустое место</h3><span class="bad" lang="de">Sie Ärztin.</span><div class="ex"><button class="say" data-say="Sie ist Ärztin." aria-label="Послушать"></button><div><span class="de" lang="de">Sie ist Ärztin.</span><span class="ru">Она врач.</span></div></div></div></article>
+      <article class="err"><div class="pic"><img src="media/3d-cal.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Возраст как вещь</h3><span class="bad" lang="de">Ich habe 30 Jahre.</span><div class="ex"><button class="say" data-say="Ich bin 30 Jahre alt." aria-label="Послушать"></button><div><span class="de" lang="de">Ich bin 30 Jahre alt.</span><span class="ru">Мне 30 лет.</span></div></div></div></article>
+      <article class="err"><div class="pic"><img src="media/3d-thermo.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Холод от первого лица</h3><span class="bad" lang="de">Ich bin kalt.</span><div class="ex"><button class="say" data-say="Mir ist kalt." aria-label="Послушать"></button><div><span class="de" lang="de">Mir ist kalt.</span><span class="ru">Мне холодно.</span></div></div></div></article>
+      <article class="err"><div class="pic"><img src="media/3d-steps.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Движение через haben</h3><span class="bad" lang="de">Ich habe gegangen.</span><div class="ex"><button class="say" data-say="Ich bin gegangen." aria-label="Послушать"></button><div><span class="de" lang="de">Ich bin gegangen.</span><span class="ru">Я ушёл.</span></div></div></div></article>
+      <article class="err"><div class="pic"><img src="media/3d-tag.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Винительный после sein</h3><span class="bad" lang="de">Das ist meinen Bruder.</span><div class="ex"><button class="say" data-say="Das ist mein Bruder." aria-label="Послушать"></button><div><span class="de" lang="de">Das ist mein Bruder.</span><span class="ru">Это мой брат.</span></div></div></div></article>
+      <article class="err"><div class="pic"><img src="media/3d-mega.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Просьба через bist</h3><span class="bad" lang="de">Bist ruhig!</span><div class="ex"><button class="say" data-say="Sei ruhig!" aria-label="Послушать"></button><div><span class="de" lang="de">Sei ruhig!</span><span class="ru">Успокойся!</span></div></div></div></article>
+      <article class="err"><div class="pic"><img src="media/3d-people.webp" alt="" width="220" height="220" loading="lazy"></div><div><h3>Вы как они</h3><span class="bad" lang="de">Ihr sind spät dran.</span><div class="ex"><button class="say" data-say="Ihr seid spät dran." aria-label="Послушать"></button><div><span class="de" lang="de">Ihr seid spät dran.</span><span class="ru">Вы опаздываете.</span></div></div></div></article>
+      <article class="err blackc"><div class="bc-top"><h3>6 <svg class="ic"><use href="#i-star"/></svg> вопросов</h3><a class="lnk" href="#quiz">Все ответы<svg class="ic"><use href="#i-arrow"/></svg></a></div><p>Узнаёшь себя в трёх пунктах? Тест пройдёт веселее.</p><a class="btn" href="#quiz">Проверить себя</a><div class="bc-car" data-car="silver flip"></div></article>
     </div>
   </div>
 </section>
@@ -826,7 +1030,7 @@ html.no-tts .say{display:none}
     </div>
 
     <div class="repair a rv" id="repair">
-      <div class="scene"><div data-car="side"></div><div class="tool"><svg class="ic w"><use href="#i-wrench"/></svg><svg class="ic c"><use href="#i-check"/></svg></div><div class="pbar"><i></i></div></div>
+      <div class="scene"><div data-car="silver" data-spin="1"></div><div class="tool"><svg class="ic w"><use href="#i-wrench"/></svg><svg class="ic c"><use href="#i-check"/></svg></div><div class="pbar"><i></i></div></div>
       <div>
         <h3 class="h3" style="margin-bottom:14px">Процесс или результат</h3>
         <div class="seg" id="rSeg"><button class="tchip on" data-r="a">werden</button><button class="tchip" data-r="b">sein</button></div>
@@ -875,8 +1079,9 @@ html.no-tts .say{display:none}
       </form>
       <div class="hang" aria-hidden="true">
         <div class="swing" id="swing"><div class="rope"></div>
-          <div class="ctag"><small>сертификат</small><b>5 форм</b><span lang="de">bin, bist, ist, sind, seid</span><div data-car="side white"></div></div>
+          <div class="ctag"><small>сертификат</small><b>5 форм</b><span lang="de">bin, bist, ist, sind, seid</span><div data-car="white"></div></div>
         </div>
+        <div class="hang-car" data-car="dark"></div>
       </div>
     </div>
   </div>
@@ -884,8 +1089,9 @@ html.no-tts .say{display:none}
 
 <!-- QUIZ -->
 <section class="quiz" id="quiz">
-  <div class="qside l" id="qL" data-car="top white" aria-hidden="true"></div>
-  <div class="qside r" id="qR" data-car="top white" aria-hidden="true"></div>
+  <div class="qtrack l" aria-hidden="true"></div><div class="qtrack r" aria-hidden="true"></div>
+  <img class="qside l" id="qL" src="media/car-top-up.webp" alt="" width="260" height="505">
+  <img class="qside r" id="qR" src="media/car-top-up.webp" alt="" width="260" height="505">
   <div class="wrap">
     <div class="qcard rv">
       <h2 class="h2"><b>Ответь</b> на 6 вопросов и <b>узнай</b> результат</h2>
@@ -1032,6 +1238,8 @@ html.no-tts .say{display:none}
       <img src="media/rv-dtz-b1-sertifikat.webp" alt="Отзыв и сертификат DTZ B1" loading="lazy" width="900" height="1065" style="max-width:380px;justify-self:center">
     </div>
 
+    <h3 class="h2 gal-h" style="text-align:center">Получи <b>весь немецкий</b> одной оплатой</h3>
+    <div class="fin4"><div class="lchip rv"><span class="tile"><svg class="ic"><use href="#i-coin"/></svg></span>Одна оплата</div><div class="lchip rv"><span class="tile"><svg class="ic"><use href="#i-inf"/></svg></span>Доступ навсегда</div><div class="lchip rv"><span class="tile"><svg class="ic"><use href="#i-up"/></svg></span>Обновления бесплатно</div><div class="lchip rv"><span class="tile"><svg class="ic"><use href="#i-offline"/></svg></span>Работает офлайн</div></div>
     <div class="prices" id="prices">
       <div class="price rv" style="background:var(--k);color:#fff"><h3 class="h3">A0–A2</h3><div class="pv">20 €</div><ul class="bul"><li style="color:#DADADA">Старт с нуля</li><li style="color:#DADADA">Доступ навсегда</li></ul><a class="btn" href="https://app.lava.top/801303618?tabId=products&sort=published">Купить A0–A2</a></div>
       <div class="price top rv" style="box-shadow:inset 0 0 0 2px var(--red)"><span class="flag">Выгоднее</span><h3 class="h3">A0–C1</h3><div class="pv">30 €<s>40 €</s></div><ul class="bul"><li>Обе платформы</li><li>Экзамены внутри</li><li>Бонус на украинском</li></ul><a class="btn" href="https://app.lava.top/801303618?tabId=products&sort=published">Купить всё</a></div>
@@ -1074,37 +1282,13 @@ function xInit(){
   }
   function fillSay(r){ $$('.say:empty', r).forEach(function(b){ b.innerHTML = SAY; }); }
 
-  /* cars */
-  var uid = 0;
-  function wheel(cx,cy,R){
-    var s = '<g class="whl" data-c="'+cx+' '+cy+'"><circle cx="'+cx+'" cy="'+cy+'" r="'+R+'" fill="var(--t)"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(R*.74)+'" fill="#0B0B0B" stroke="var(--r2c)" stroke-width="'+(R*.05)+'"/>';
-    for(var i=0;i<5;i++){ s += '<g transform="rotate('+(i*72)+' '+cx+' '+cy+')"><path fill="var(--r1)" d="M'+(cx-R*.05)+' '+(cy-R*.14)+'L'+(cx-R*.2)+' '+(cy-R*.7)+'L'+(cx-R*.08)+' '+(cy-R*.72)+'L'+(cx+R*.02)+' '+(cy-R*.14)+'z"/><path fill="var(--r2c)" d="M'+(cx+R*.05)+' '+(cy-R*.14)+'L'+(cx+R*.2)+' '+(cy-R*.7)+'L'+(cx+R*.08)+' '+(cy-R*.72)+'L'+(cx-R*.02)+' '+(cy-R*.14)+'z"/></g>'; }
-    return s + '<circle cx="'+cx+'" cy="'+cy+'" r="'+(R*.19)+'" fill="var(--r1)"/><circle cx="'+cx+'" cy="'+cy+'" r="'+(R*.08)+'" fill="#222"/></g>';
-  }
-  var BODY = 'M44 206C30 200 26 176 34 160C42 140 80 126 130 116C200 96 262 58 342 46C400 38 470 38 520 52C566 66 604 96 632 116C690 124 752 136 786 154C806 166 810 190 800 204C796 210 786 212 772 212L694 212A82 82 0 0 0 530 212L304 212A82 82 0 0 0 140 212L60 212C54 212 48 210 44 206Z';
-  function carParts(){
-    return '<path d="'+BODY+'" fill="var(--b)"/>'
-     + '<path d="M64 190 140 190A82 82 0 0 0 139 212L60 212C52 210 46 206 44 200zM304 190H530A82 82 0 0 0 530 212H304A82 82 0 0 0 304 190zM694 190H806C804 198 802 202 800 204 796 210 786 212 772 212H694A82 82 0 0 0 694 190z" fill="var(--b2)"/>'
-     + '<path d="M346 62C410 52 470 52 516 66C544 76 572 96 594 116L358 118z" fill="var(--gl)"/><path d="M338 64 346 118 236 118C266 94 300 74 338 64z" fill="var(--gl)"/><path d="M432 54 436 118" stroke="var(--b)" stroke-width="7"/>'
-     + '<path d="M120 134C260 126 520 124 760 150" fill="none" stroke="var(--hi)" stroke-width="3"/>'
-     + '<path d="M332 118 322 200M566 120 548 200" stroke="var(--b2)" stroke-width="2.500" fill="none"/><rect x="496" y="136" width="34" height="7" rx="3" fill="var(--hi)"/>'
-     + '<path d="M752 146 792 158 784 168 748 158z" fill="#F2F2F2"/><path d="M36 154 92 132 96 142 42 168z" fill="#E5261A"/>';
-  }
-  function carSide(cls){ return '<svg class="car '+(cls||'')+'" viewBox="0 0 820 292" aria-hidden="true">'+carParts()+wheel(222,212,70)+wheel(612,212,70)+'</svg>'; }
-  function carSlice(i){ var x=[0,273,546][i]; return '<svg class="car white" viewBox="'+x+' 30 274 262" aria-hidden="true">'+carParts()+wheel(222,212,70)+wheel(612,212,70)+'</svg>'; }
-  function carTop(cls){ return '<svg class="car '+(cls||'')+'" viewBox="0 0 240 104" aria-hidden="true"><rect x="146" y="2" width="16" height="12" rx="4" fill="var(--b2)"/><rect x="146" y="90" width="16" height="12" rx="4" fill="var(--b2)"/><rect x="6" y="9" width="228" height="86" rx="32" fill="var(--b)" stroke="var(--b2)" stroke-width="2"/><path d="M152 22 182 15Q194 52 182 89L152 82Q160 52 152 22z" fill="var(--gl)"/><path d="M60 24 38 19Q30 52 38 85L60 80Q54 52 60 24z" fill="var(--gl)"/><rect x="66" y="23" width="80" height="58" rx="11" fill="var(--hi)" stroke="var(--b2)" stroke-width="1.500"/><path d="M222 17l10 10v6l-16-12zM222 87l10-10v-6l-16 12z" fill="#ddd"/><path d="M10 26l10-11 6 2-12 15zM10 78l10 11 6-2-12-15z" fill="#E5261A"/></svg>'; }
-  function bigWheel(){ return '<svg viewBox="0 0 400 400" aria-hidden="true" class="car" style="--r1:#C4C4C4;--r2c:#6F6F6F;--t:#060606"><circle cx="200" cy="200" r="198" fill="#050505"/><circle cx="200" cy="200" r="178" fill="none" stroke="#1c1c1c" stroke-width="6" stroke-dasharray="2 9"/>'+wheel(200,200,165)+'</svg>'; }
-  function franken(){
-    uid++; var a='c'+uid+'a', b='c'+uid+'b', c='c'+uid+'c';
-    var f = function(id,cl,col,hi){ return '<g class="'+cl+'" clip-path="url(#'+id+')" style="--b:'+col+';--b2:'+hi+';--hi:'+hi+';--gl:#151515"><g>'+carParts()+'</g></g>'; };
-    return '<svg class="car" viewBox="-30 -30 880 340" aria-hidden="true"><defs><clipPath id="'+a+'"><rect x="0" y="0" width="340" height="300"/></clipPath><clipPath id="'+b+'"><rect x="340" y="0" width="200" height="300"/></clipPath><clipPath id="'+c+'"><rect x="540" y="0" width="290" height="300"/></clipPath></defs>'
-      + '<g id="fkA">'+f(c,'x','#7D8B9C','#5D6A7A')+wheel(612,212,70)+'</g>'
-      + '<g id="fkB">'+f(b,'x','#191919','#3B3B3B')+'</g>'
-      + '<g id="fkC">'+f(a,'x','#E5261A','#B51A11')+wheel(222,212,70)+'</g></svg>';
-  }
+  /* cars: rendered bodies with real wheels that can spin */
+  var CARS={dark:'media/car-dark.webp',silver:'media/car-silver.webp',white:'media/car-white.webp',red:'media/car-red.webp',steel:'media/car-steel.webp'};
+  function vcar(k,flip){ return '<div class="vcar'+(flip?' flip':'')+'"><img src="'+CARS[k]+'" alt="" width="1400" height="447" loading="lazy"><img class="vw l" src="media/wheel-s.webp" alt="" width="300" height="300" loading="lazy"><img class="vw r" src="media/wheel-s.webp" alt="" width="300" height="300" loading="lazy"></div>'; }
   $$('[data-car]').forEach(function(el){
-    var k = el.dataset.car, p = k.split(' ');
-    el.innerHTML = p[0]==='side' ? carSide(p[1]) : p[0]==='top' ? carTop(p[1]) : p[0]==='wheel' ? bigWheel() : p[0]==='franken' ? franken() : /^slice/.test(p[0]) ? carSlice(+p[0].slice(5)) : '';
+    var p=el.dataset.car.split(' ');
+    if(/^slice/.test(p[0])){ el.innerHTML='<div class="slw s'+p[0].slice(5)+'">'+vcar('white')+'</div>'; return; }
+    el.innerHTML=vcar(p[0],p[1]==='flip');
   });
 
   typo(document.body); fillSay(document);
@@ -1130,27 +1314,47 @@ function xInit(){
     {r:['Она','из Вены'],d:['Sie','aus Wien'],v:'ist',s:'Sie ist aus Wien.',t:'Она из Вены.'},
     {r:['Мы','в кино'],d:['Wir','im Kino'],v:'sind',s:'Wir sind im Kino.',t:'Мы в кино.'}
   ];
-  var pI=0, pT=null, pLive=false, stage=$('#pStage'), pcar=$('#pCar'), slot=$('#pSlot'), steps=$$('#pSteps span');
+  var pI=-1, stage=$('#pStage'), pcar=$('#pCar'), slot=$('#pSlot'), steps=$$('#pSteps span'), pSpan=0;
   function pStep(n){ steps.forEach(function(s,i){ s.classList.toggle('on', i===n); }); }
-  function pos(){ var a=stage.getBoundingClientRect(), b=slot.getBoundingClientRect(), c=pcar.getBoundingClientRect(); return {x:b.left-a.left+(b.width-c.width)/2, y:b.top-a.top+(b.height-c.height)/2}; }
-  function pSet(i){ var d=PX[i]; pI=i; $('#pR1').textContent=d.r[0]; $('#pR2').textContent=d.r[1]; $('#pD1').textContent=d.d[0]; $('#pD2').textContent=d.d[1]; $('#pV').textContent=d.v; $('#pS').textContent=d.s; $('#pT').textContent=ty(d.t); $('#pSay').dataset.say=d.s; $$('#pEx .tchip').forEach(function(b,k){ b.classList.toggle('on',k===i); }); }
-  function pFinal(){ var p=pos(); pcar.style.transform='translate('+p.x+'px,'+p.y+'px)'; slot.classList.add('ok'); slot.classList.remove('need'); pStep(3); }
-  function pRun(i){
-    pSet(i); if(pT) pT.kill(); slot.classList.remove('ok','need');
-    if(!G){ pFinal(); return; }
-    var p=pos(), sw=stage.clientWidth;
-    G.set(pcar,{x:-160,y:p.y-74,rotation:0}); pStep(0);
-    pT = G.timeline({onComplete:function(){ if(pLive) pT=G.delayedCall(2.4,function(){ pRun((pI+1)%PX.length); }); }})
-      .call(pStep,[1],1.1).call(function(){ slot.classList.add('need'); },null,1.1)
-      .call(pStep,[2],2.3)
-      .to(pcar,{duration:1.1,ease:'power2.inOut',motionPath:{path:[{x:-160,y:p.y-74},{x:Math.min(sw*.2,p.x-30),y:p.y-74},{x:p.x,y:p.y}],curviness:1.2}},2.3)
-      .call(function(){ slot.classList.remove('need'); slot.classList.add('ok'); pStep(3); },null,3.4)
-      .fromTo('#pD1,#pD2',{y:-5},{y:0,duration:.5,ease:'elastic.out(1.2,.4)'},3.4);
+  function pos(){ var a=stage.getBoundingClientRect(), b=slot.getBoundingClientRect(); return {x:b.left-a.left+(b.width-pcar.offsetWidth)/2, y:b.top-a.top+(b.height-pcar.offsetHeight)/2}; }
+  function pSet(i){ if(i===pI) return; var d=PX[i]; pI=i; $('#pR1').textContent=d.r[0]; $('#pR2').textContent=d.r[1]; $('#pD1').textContent=d.d[0]; $('#pD2').textContent=d.d[1]; $('#pV').textContent=d.v; $('#pS').textContent=d.s; $('#pT').textContent=ty(d.t); $('#pSay').dataset.say=d.s; $$('#pEx .tchip').forEach(function(b,k){ b.classList.toggle('on',k===i); }); }
+  function ease(t){ return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2; }
+  function pDraw(p){
+    var n=PX.length, f=Math.min(n-.0001,p*n), i=Math.floor(f), t=f-i; pSet(i);
+    var a=pos(), sx=-pcar.offsetWidth-30, ly=a.y-(stage.clientHeight>200?78:64), x=sx, y=ly, r=0;
+    var last=i===n-1;
+    if(t<.34){ x=sx; y=ly; }
+    else if(t<.74){ var q=ease((t-.34)/.4); x=sx+(a.x-sx)*q; y=ly+(a.y-ly)*Math.pow(q,3); r=Math.sin(q*Math.PI)*7; }
+    else if(t<.92||last){ x=a.x; y=a.y; }
+    else { var q2=ease((t-.92)/.08); x=a.x+(stage.clientWidth-a.x+60)*q2; y=a.y+(ly-a.y)*q2; }
+    pcar.style.transform='translate('+x+'px,'+y+'px) rotate('+r+'deg)';
+    var st=t<.14?0:t<.34?1:t<.74?2:3; pStep(st);
+    slot.classList.toggle('need',st===1||st===2); slot.classList.toggle('ok',st===3);
   }
-  $$('#pEx .tchip').forEach(function(b,i){ b.addEventListener('click',function(){ pRun(i); }); });
-  pFinal();
-  if(G) whenVisible($('#park'),function(){ if(!pLive){ pLive=true; pRun(pI); } },function(){ pLive=false; if(pT) pT.kill(); pFinal(); });
-  addEventListener('resize',function(){ if(!pLive||!G) pFinal(); });
+  function pFinal(){ pSet(pI<0?0:pI); var a=pos(); pcar.style.transform='translate('+a.x+'px,'+a.y+'px)'; slot.classList.add('ok'); slot.classList.remove('need'); pStep(3); }
+  var parkST=null;
+  $$('#pEx .tchip').forEach(function(b,i){ b.addEventListener('click',function(){ if(parkST){ scrollTo(0,parkST.start+(parkST.end-parkST.start)*((i+.8)/PX.length)); } else { pSet(i); pFinal(); } }); });
+  pSet(0); pFinal();
+  if(G){ parkST=ScrollTrigger.create({trigger:'#parkW',start:'top 76px',end:'bottom bottom',onUpdate:function(s){ pDraw(s.progress); },onRefresh:function(s){ pDraw(s.progress); }}); }
+  else addEventListener('resize',pFinal);
+
+  /* gate: every pronoun gets its form */
+  var GP=[['ich','bin'],['du','bist'],['er, sie, es','ist'],['wir','sind'],['ihr','seid'],['sie, Sie','sind']];
+  var gl=$('#gList'); gl.innerHTML=GP.map(function(x){ return '<button class="g-r" data-say="'+x[0].split(',')[0]+' '+x[1]+'"><small>'+x[0]+'</small><b>'+x[1]+'</b></button>'; }).join('');
+  var gr=$$('.g-r',gl), gc=$('#gCar'), arm=$('#gArm'), gI=-1;
+  function gDraw(p){
+    var n=GP.length,f=Math.min(n-.0001,p*n),i=Math.floor(f),t=f-i,W=gc.parentNode.clientWidth,cw=gc.offsetWidth;
+    if(i!==gI){ gI=i; $('#gP').textContent=GP[i][0].split(',')[0]; }
+    var stop=W*.5-cw-34, x;
+    if(t<.42) x=-cw+(stop+cw)*ease(t/.42); else if(t<.62) x=stop; else x=stop+(W-stop+40)*ease((t-.62)/.38);
+    gc.style.transform='translateX('+x+'px)';
+    var op=t<.42?0:t<.56?(t-.42)/.14:t<.86?1:Math.max(0,1-(t-.86)/.14);
+    arm.style.transform='rotate('+(-82*op)+'deg)';
+    var show=i-(t<.5?1:0); $('#gNowP').textContent=GP[Math.max(0,show)][0]; $('#gNow').textContent=GP[Math.max(0,show)][1];
+    gr.forEach(function(r,k){ r.classList.toggle('on',k<=show); });
+  }
+  if(G) ScrollTrigger.create({trigger:'#gateW',start:'top 76px',end:'bottom bottom',onUpdate:function(s){ gDraw(s.progress); },onRefresh:function(s){ gDraw(s.progress); }});
+  else { gr.forEach(function(r){ r.classList.add('on'); }); }
 
   /* builder */
   var M = {
@@ -1215,7 +1419,7 @@ function xInit(){
   function fShow(d){ var a=$('#fAux'); a.textContent=d.a; a.classList.toggle('h',d.a==='haben');
     $('#fK').innerHTML=d.k.map(function(w){ var c=w[0]==='|'?'a':w[0]==='~'?'z':''; return '<span class="'+c+'">'+w.replace(/^[|~]/,'')+'</span>'; }).join('');
     $('#fT').textContent=ty(d.t); $('#fSay').dataset.say=d.s;
-    if(G) G.fromTo($$('#fK span'),{y:12,scale:.9},{y:0,scale:1,duration:.4,stagger:.07,ease:'back.out(2)'}); }
+    if(G){ G.fromTo($$('#fK span:not(.z)'),{y:12,scale:.9},{y:0,scale:1,duration:.4,stagger:.07,ease:'back.out(2)'}); var z=$('#fK .z'), a2=$('#fK .a'); if(z&&a2){ var dx=z.offsetTop===a2.offsetTop?-(z.offsetLeft-a2.offsetLeft-a2.offsetWidth-8):-40; G.fromTo(z,{x:dx,y:-30},{x:0,y:0,duration:.8,ease:'power2.inOut',delay:.25}); } } }
   function fRun(i,once){
     fClear(); fI=i; var d=V[i], last=d.h<0?2:d.h;
     nodes.forEach(function(n){ n.classList.remove('ask','yes'); });
@@ -1272,7 +1476,7 @@ function xInit(){
     {q:'Das Formular ist bis Freitag auszufüllen. Что это значит?',o:['Анкету нужно заполнить до пятницы','Анкета уже заполнена','Анкету заполняют прямо сейчас'],c:0,s:'Das Formular ist bis Freitag auszufüllen.',t:'Анкету нужно заполнить до пятницы.',x:'sein + zu в анкете значит: так нужно.'}
   ];
   var qi=0, score=0, wrongs=[], qz=$('#qz');
-  function qSide(){ var k=qi/(Q.length); var dy=120-(k*240); var l=$('#qL'), r=$('#qR'); l.style.translate='0 '+dy+'px'; r.style.translate='0 '+(-dy)+'px'; }
+  function qSide(){ var k=qi/(Q.length); var dy=170-(k*340); var l=$('#qL'), r=$('#qR'); l.style.translate='0 '+dy+'px'; r.style.translate='0 '+(-dy)+'px'; }
   function qDraw(){
     var d=Q[qi];
     qz.innerHTML='<div class="q-head"><p lang="'+(/[а-яё]/i.test(d.q)?'ru':'de')+'">'+ty(d.q)+'</p><span>Шаг '+(qi+1)+'/'+Q.length+'</span></div><div class="opts" id="qO">'+d.o.map(function(o,i){ return '<button class="opt" data-i="'+i+'" lang="'+(/[а-яё]/i.test(o)?'ru':'de')+'">'+ty(o)+'</button>'; }).join('')+'<button class="btn" id="qN" disabled>Далее</button></div><div class="q-x" id="qX"></div>';
@@ -1316,9 +1520,43 @@ function xInit(){
   if(!G) return;
   document.documentElement.classList.add('gs');
 
-  /* wheels */
-  $$('[data-spin] .whl').forEach(function(w){ G.to(w,{rotation:900,svgOrigin:w.dataset.c,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:.6}}); G.from(w,{rotation:-300,svgOrigin:w.dataset.c,duration:1.1,ease:'power3.out'}); });
-  $$('.bigwheel svg').forEach(function(s){ G.to(s,{rotation:220,ease:'none',transformOrigin:'50% 50%',scrollTrigger:{trigger:'#story',start:'top bottom',end:'bottom top',scrub:.8}}); });
+  /* hero: the car drives in, brakes, then rolls with the scroll */
+  var hc=$('#heroCar');
+  if(hc){ var hw=$$('.vw',hc);
+    G.timeline().fromTo(hc,{x:-Math.min(innerWidth,1300)},{x:0,duration:1.5,ease:'expo.out'},0).fromTo(hw,{rotation:-1080},{rotation:0,duration:1.5,ease:'expo.out'},0).to(hc,{y:5,duration:.14,ease:'power1.out'},1.05).to(hc,{y:0,duration:.5,ease:'elastic.out(1.2,.4)'},1.2);
+    G.to(hc,{xPercent:14,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:.5}});
+  }
+  /* any other car: wheels roll while it moves through the screen */
+  $$('[data-spin] .vw').forEach(function(w){ if(hc&&hc.contains(w)) { G.to(w,{rotation:720,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:.5}}); return; } G.to(w,{rotation:540,ease:'none',scrollTrigger:{trigger:w.closest('[data-spin]'),start:'top bottom',end:'bottom top',scrub:.6}}); });
+  G.to('.bigwheel img',{rotation:300,ease:'none',scrollTrigger:{trigger:'#story',start:'top bottom',end:'bottom top',scrub:.7}});
+  G.from('.bigwheel',{x:-260,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'#story',start:'top 70%',once:true}});
+  /* white panels rise over the dark sections */
+  $$('.lt').forEach(function(p){ G.fromTo(p,{y:70,scale:.965},{y:0,scale:1,transformOrigin:'50% 0%',ease:'none',scrollTrigger:{trigger:p,start:'top bottom',end:'top 45%',scrub:.5}}); });
+  /* story: lines light up as you read */
+  (function(){ var ls=$$('.t-body p'); ls.forEach(function(l){ l.classList.add('dim'); }); ScrollTrigger.create({trigger:'.tablet',start:'top 72%',end:'bottom 58%',onUpdate:function(s){ var n=Math.round(s.progress*ls.length); ls.forEach(function(l,i){ l.classList.toggle('dim',i>=n); }); }}); })();
+  G.from('.t-stars .ic',{scale:.3,rotation:-40,duration:.6,ease:'back.out(3)',stagger:.08,scrollTrigger:{trigger:'.t-wrap',start:'top 75%',once:true}});
+  /* connecting lines */
+  $$('.link3').forEach(function(l){ G.from(l,{'--ln':0,duration:1,ease:'power2.out',scrollTrigger:{trigger:l,start:'top 88%',once:true}}); });
+  /* route cards */
+  G.from('.rcard',{y:46,scale:.94,duration:.7,ease:'back.out(1.6)',stagger:.06,scrollTrigger:{trigger:'.routes',start:'top 92%',once:true}});
+  /* feature cars drive into their cards */
+  $$('.gc-car').forEach(function(c,i){ G.fromTo($('.vcar',c),{x:i?180:-180},{x:0,ease:'none',scrollTrigger:{trigger:c,start:'top bottom',end:'top 50%',scrub:.6}}); });
+  /* two cars meet in the middle */
+  G.fromTo('#duo .d-l .vcar',{x:-320},{x:0,ease:'none',scrollTrigger:{trigger:'#duo',start:'top bottom',end:'top 45%',scrub:.6}});
+  G.fromTo('#duo .d-r .vcar',{x:320},{x:0,ease:'none',scrollTrigger:{trigger:'#duo',start:'top bottom',end:'top 45%',scrub:.6}});
+  G.fromTo('.bc-car .vcar',{x:150},{x:0,ease:'none',scrollTrigger:{trigger:'.bc-car',start:'top bottom',end:'top 55%',scrub:.6}});
+  /* white car comes together across three cards */
+  [-90,0,90].forEach(function(d,i){ G.fromTo('.s'+i+' .vcar',{x:d,y:i===1?30:0},{x:0,y:0,ease:'none',scrollTrigger:{trigger:'.sum3',start:'top 85%',end:'top 35%',scrub:.6}}); });
+  /* endings land on war */
+  G.timeline({repeat:-1,repeatDelay:1.8,scrollTrigger:{trigger:'#wb',start:'top 92%',toggleActions:'play pause resume pause'}}).from('#wb i',{y:-46,rotation:-24,duration:.7,ease:'bounce.out',stagger:.22});
+  /* parallax for phones and screenshots */
+  $$('.phones .phone').forEach(function(p,i){ G.fromTo(p,{y:60+i*26},{y:-20,ease:'none',scrollTrigger:{trigger:'.phones',start:'top bottom',end:'bottom top',scrub:.6}}); });
+  $$('.gal').forEach(function(g){ G.from($$('.bfr',g),{rotation:function(i){ return i%2?3:-3; },y:50,duration:.8,ease:'power3.out',stagger:.07,scrollTrigger:{trigger:g,start:'top 88%',once:true}}); });
+  if($('#prices')) G.from('.price',{y:60,scale:.92,duration:.75,ease:'back.out(1.6)',stagger:.1,scrollTrigger:{trigger:'#prices',start:'top 88%',once:true}});
+  if($('#mL')) G.from('#mL .mi',{y:-44,rotation:-3,duration:.6,ease:'bounce.out',stagger:.18,scrollTrigger:{trigger:'#mist',start:'top 80%',once:true}});
+  G.to('.quiz .qtrack',{backgroundPositionY:'+=640',ease:'none',scrollTrigger:{trigger:'.quiz',start:'top bottom',end:'bottom top',scrub:.6}});
+  /* a small car rides the track along the page */
+  (function(){ var lc=$('#laneCar'); if(!lc) return; G.fromTo(lc,{y:0},{y:function(){ return innerHeight-110; },ease:'none',scrollTrigger:{start:0,end:'max',scrub:.4,invalidateOnRefresh:true}}); })();
 
   /* headings */
   (document.fonts&&document.fonts.ready||Promise.resolve()).then(function(){ $$('.h2').forEach(function(h){
@@ -1332,12 +1570,19 @@ function xInit(){
   G.from('.t-body p',{x:18,duration:.5,ease:'power2.out',stagger:.09,scrollTrigger:{trigger:'.tablet',start:'top 70%',once:true}});
 
   /* franken: three cars become one */
-  var fkT=G.timeline({scrollTrigger:{trigger:'#fk',start:'top 85%',end:'top 30%',scrub:.6}});
-  fkT.from('#fkC',{x:-70,y:-26,rotation:-7,svgOrigin:'170 150',ease:'none'},0).from('#fkA',{x:70,y:-26,rotation:7,svgOrigin:'660 150',ease:'none'},.15).from('#fkB',{y:-60,ease:'none'},.3);
+  var fkT=G.timeline({scrollTrigger:{trigger:'#fk',start:'top 85%',end:'top 22%',scrub:.6}});
+  fkT.from('#fk .fkp.a',{x:-120,y:-46,rotation:-8,ease:'none'},0).from('#fk .fkp.c',{x:120,y:-46,rotation:8,ease:'none'},.15).from('#fk .fkp.b',{y:-110,ease:'none'},.3);
 
-  /* errors: strike wrong, slide right */
+  /* errors: scanner passes, wrong is struck, stamp lands */
   $$('#errs .err:not(.blackc)').forEach(function(c){
-    G.timeline({scrollTrigger:{trigger:c,start:'top 82%',once:true}}).fromTo($('.bad',c),{'--s':0},{'--s':1,duration:.45,ease:'power2.inOut'}).from($('.ex',c),{y:12,x:-12,duration:.4,ease:'back.out(2)'},'-=.05');
+    var sc=document.createElement('i'); sc.className='scan'; c.appendChild(sc);
+    var st=document.createElement('b'); st.className='stamp'; st.textContent='Принято'; c.appendChild(st);
+    G.timeline({scrollTrigger:{trigger:c,start:'top 82%',once:true}})
+      .fromTo(sc,{left:'0%'},{left:'100%',duration:.8,ease:'none'})
+      .fromTo($('.bad',c),{'--s':0},{'--s':1,duration:.4,ease:'power2.inOut'},.35)
+      .from($('.ex',c),{y:12,x:-12,duration:.4,ease:'back.out(2)'},.7)
+      .from(st,{scale:2.6,rotation:-22,duration:.5,ease:'back.out(3)'},.85);
+    G.from($('.pic img',c),{y:18,rotation:-12,scale:.7,duration:.8,ease:'back.out(2.4)',scrollTrigger:{trigger:c,start:'top 88%',once:true}});
   });
 
   /* zu lands between the parts */
@@ -1350,8 +1595,7 @@ function xInit(){
   /* counters */
   $$('.count').forEach(function(el){ var to=+el.dataset.to, suf=el.dataset.suf||'', o={v:0}; G.to(o,{v:to,duration:1.4,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 92%',once:true},onUpdate:function(){ el.textContent=Math.round(o.v)+suf; }}); });
 
-  function refresh(){ ScrollTrigger.refresh(); pFinalIfIdle(); }
-  function pFinalIfIdle(){ if(!pLive) pFinal(); }
+  function refresh(){ ScrollTrigger.refresh(); }
   addEventListener('load',refresh);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(refresh);
 }
