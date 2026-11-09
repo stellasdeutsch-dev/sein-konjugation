@@ -804,6 +804,33 @@ body{letter-spacing:-.022em;font-size:16px}
 .hero-car{margin-bottom:12px}
 @media (min-width:900px){.rev{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:end}}
 @media (max-width:899px){.rev-ph{min-height:0;aspect-ratio:1/1;max-width:420px;width:100%;margin:0 auto}}
+
+/*ret*/
+.ret-lw{background:var(--k);padding:12px var(--gut) 44px}
+.ret-loop{max-width:40em;margin:0 auto;text-align:center;font-size:clamp(18px,1.6vw,21px);line-height:1.4;color:#fff;text-wrap:pretty}
+.ret-loop b{font-weight:650;color:var(--redt)}
+.ret-cw{background:var(--k);padding:30px 0}
+.ret-cp{background:var(--k3);border-radius:var(--r);padding:clamp(18px,2vw,26px) clamp(20px,3vw,32px);display:grid;grid-template-columns:minmax(230px,.42fr) 1fr;gap:12px 36px;align-items:center}
+.ret-cp-l b{display:block;font-weight:500;font-size:clamp(20px,1.9vw,25px);line-height:1.15;letter-spacing:-.03em;color:#fff}
+.ret-cp-b{display:block;height:8px;border-radius:4px;background:var(--k4);margin-top:12px;overflow:hidden}
+.ret-cp-b i{display:block;height:100%;width:var(--p);border-radius:4px;background:var(--red)}
+.ret-cp p{margin:0;font-size:16px;line-height:1.42;color:#DADADA;text-wrap:pretty}
+.ret-cp p b{font-weight:650;color:#fff}
+.dk.ret-br{padding-bottom:0}
+.ret-br-g{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:0 clamp(28px,5vw,64px);align-items:end}
+.ret-br-p{display:block;width:100%;height:auto}
+.ret-br-t{align-self:center;padding-bottom:clamp(40px,5vw,64px)}
+.ret-bul{margin:18px 0 0}
+.ret-why{margin:16px 0 24px;font-size:16px;line-height:1.45;color:#DADADA;text-wrap:pretty}
+.ret-why b{font-weight:650;color:#fff}
+@media (max-width:759px){
+  .ret-cp{grid-template-columns:1fr}
+  .ret-br-g{grid-template-columns:1fr}
+  .ret-br-p{max-width:320px;justify-self:center}
+  .ret-br-t{text-align:center;padding-top:30px;padding-bottom:56px}
+  .ret-bul{text-align:left;width:fit-content;margin-inline:auto}
+}
+/*/ret*/
 </style>
 <svg style="position:absolute;width:0;height:0" aria-hidden="true"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6"/><path d="M8.5 6H18v9.5"/></symbol>
 <symbol id="i-say" viewBox="0 0 24 24"><path d="M4 9.5v5h3.6L12.5 19V5L7.6 9.5H4z" fill="currentColor"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6"/><path d="M18.3 6.4a8 8 0 0 1 0 11.2"/></symbol>
@@ -886,6 +913,8 @@ body{letter-spacing:-.022em;font-size:16px}
     </div>
   </div>
 </section>
+
+<div class="ret-lw"><p class="ret-loop">Машину чинят или машина уже готова? В немецком это разные глаголы. <b>Какие, скажу ближе к концу.</b></p></div>
 
 <!-- STORY -->
 <section class="dk" id="story">
@@ -1006,6 +1035,8 @@ body{letter-spacing:-.022em;font-size:16px}
 </section>
 
 <!-- HOW -->
+<div class="ret-cw"><div class="wrap"><div class="ret-cp"><div class="ret-cp-l"><b>Почти треть позади</b><span class="ret-cp-b" style="--p:29%"><i></i></span></div><p>Из <b>12 минут</b> осталось около восьми. Дальше кузов: sein собран из трёх разных глаголов, поэтому <span lang="de">bin</span> и <span lang="de">war</span> даже не похожи.</p></div></div></div>
+
 <section class="lt" id="how">
   <div class="wrap">
     <div class="hd">
@@ -1139,6 +1170,8 @@ body{letter-spacing:-.022em;font-size:16px}
 </section>
 
 <!-- RULES -->
+<div class="ret-cw"><div class="wrap"><div class="ret-cp"><div class="ret-cp-l"><b>Почти три четверти позади</b><span class="ret-cp-b" style="--p:72%"><i></i></span></div><p>Осталось меньше четырёх минут. Дальше та самая машина. А ещё просьба, в которой нет ни <span lang="de">bist</span>, ни <span lang="de">sind</span>.</p></div></div></div>
+
 <section class="dk" id="rules">
   <div class="wrap">
     <div class="hd">
@@ -1277,6 +1310,21 @@ body{letter-spacing:-.022em;font-size:16px}
 
 
 
+
+<section class="dk ret-br">
+  <div class="wrap ret-br-g">
+    <img class="ret-br-p" src="media/ph-white.webp" alt="" width="1660" height="530" loading="lazy">
+    <div class="ret-br-t">
+      <h2 class="h2">Чинят это <b>wird</b>. Готово это <b>ist</b></h2>
+      <ul class="bul ret-bul">
+        <li><span>Пять форм настоящего времени на месте: <b lang="de">bin, bist, ist, sind, seid</b></span></li>
+        <li><span>Хозяйке можно звонить: <b lang="de">Mir ist kalt</b>. Психолог отменяется</span></li>
+      </ul>
+      <p class="ret-why">Это был один глагол. На платформе вся глагольная база и <b>340+</b> гайдов от A0 до C1. Всё вместе <b>30 €</b> один раз.</p>
+      <a class="btn" href="#platform">Смотреть платформу</a>
+    </div>
+  </div>
+</section>
 
 <section class="dk" id="platform">
   <div class="wrap">
