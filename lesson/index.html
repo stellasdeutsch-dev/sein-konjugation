@@ -793,6 +793,17 @@ body{letter-spacing:-.022em;font-size:16px}
 .zrt-c{margin-top:12px;font-size:15px;color:var(--ink2);text-align:center;line-height:1.35;text-wrap:pretty}
 .zrt-c b{color:var(--ink);font-weight:600}
 /*/vz*/
+
+/* photo cars and the person block */
+.vcar.ph>img:first-child{object-fit:contain}
+.rev-t>img{margin-top:26px}
+.rev-ph{position:relative;align-self:end;min-height:480px}
+.rev-ph img{border:0!important;border-radius:0!important}
+.rp-car{position:absolute;right:0;bottom:0;width:100%}
+.rev-ph .rp-p{position:absolute;left:10%;bottom:0;width:66%;height:auto;z-index:1}
+.hero-car{margin-bottom:12px}
+@media (min-width:900px){.rev{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:end}}
+@media (max-width:899px){.rev-ph{min-height:0;aspect-ratio:1/1;max-width:420px;width:100%;margin:0 auto}}
 </style>
 <svg style="position:absolute;width:0;height:0" aria-hidden="true"><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M6 18 18 6"/><path d="M8.5 6H18v9.5"/></symbol>
 <symbol id="i-say" viewBox="0 0 24 24"><path d="M4 9.5v5h3.6L12.5 19V5L7.6 9.5H4z" fill="currentColor"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6"/><path d="M18.3 6.4a8 8 0 0 1 0 11.2"/></symbol>
@@ -881,7 +892,7 @@ body{letter-spacing:-.022em;font-size:16px}
   <div class="wrap story-g">
     <div class="story-t">
       <h2 class="s-title">Отзыв клиента<i><img src="../media/3d-heart.webp" alt="" width="80" height="80"></i></h2>
-      <div class="bigwheel" aria-hidden="true"><img src="../media/wheel.webp" alt="" width="900" height="900"></div>
+      <div class="bigwheel" aria-hidden="true"><img src="../media/ph-wheel.webp" alt="" width="741" height="720"></div>
     </div>
     <div class="t-wrap"><div class="t-stars" aria-hidden="true"><svg class="ic on"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></div><article class="tablet rv">
       <div class="t-top">
@@ -1002,7 +1013,7 @@ body{letter-spacing:-.022em;font-size:16px}
       <p class="lede">Обычный глагол: одна основа, меняешь окончания. Тут кузов от одного, двери от другого, багажник от третьего. Поэтому <span lang="de">bin</span> и <span lang="de">war</span> даже не похожи.</p>
     </div>
     <div class="fk" id="fk">
-      <div class="fk-c"><div class="fkp a" data-car="red"></div><div class="fkp b" data-car="dark"></div><div class="fkp c" data-car="steel"></div></div>
+      <div class="fk-c"><div class="fkp a" data-car="red3d"></div><div class="fkp b" data-car="dark3d"></div><div class="fkp c" data-car="steel"></div></div>
       <div class="fk-l">
         <div><h4><i style="background:var(--red)"></i>Основа с b</h4><div class="fk-w" lang="de"><button data-say="bin">bin</button><button data-say="bist">bist</button></div></div>
         <div><h4><i style="background:#111"></i>Основа с s</h4><div class="fk-w" lang="de"><button data-say="ist">ist</button><button data-say="sind">sind</button><button data-say="seid">seid</button><button data-say="sein">sein</button></div></div>
@@ -1308,8 +1319,14 @@ function xInit(){
   function fillSay(r){ $$('.say:empty', r).forEach(function(b){ b.innerHTML = SAY; }); }
 
   /* cars: rendered bodies with real wheels that can spin */
-  var CARS={dark:'../media/car-dark.webp',silver:'../media/car-silver.webp',white:'../media/car-white.webp',red:'../media/car-red.webp',steel:'../media/car-steel.webp'};
-  function vcar(k,flip){ return '<div class="vcar'+(flip?' flip':'')+'"><img src="'+CARS[k]+'" alt="" width="1400" height="447" loading="lazy"><img class="vw l" src="../media/wheel-s.webp" alt="" width="300" height="300" loading="lazy"><img class="vw r" src="../media/wheel-s.webp" alt="" width="300" height="300" loading="lazy"></div>'; }
+  var CARS={dark3d:'../media/car-dark.webp',red3d:'../media/car-red.webp',steel:'../media/car-steel.webp'};
+  var WW=[[16.53,55.17,13.855],[68.795,56.075,13.855]];
+  var WF=['../media/wh-white-l.webp','../media/wh-white-r.webp'];
+  var PH={dark:['../media/ph-dark.webp',[[11.675,53.547,13.012],[74.711,54,13.012]],['../media/wh-dark-l.webp','../media/wh-dark-r.webp']],white:['../media/ph-white.webp',WW,WF],silver:['../media/ph-silver.webp',WW,WF],red:['../media/ph-red.webp',WW,WF]};
+  function vcar(k,flip){
+    var p=PH[k];
+    if(p) return '<div class="vcar ph'+(flip?' flip':'')+'"><img src="'+p[0]+'" alt="" width="1660" height="530" loading="lazy">'+p[1].map(function(w,i){return '<img class="vw" style="left:'+w[0]+'%;top:'+w[1]+'%;width:'+w[2]+'%" src="'+p[2][i]+'" alt="" width="300" height="300" loading="lazy">';}).join('')+'</div>';
+    return '<div class="vcar'+(flip?' flip':'')+'"><img src="'+CARS[k]+'" alt="" width="1400" height="447" loading="lazy"><img class="vw l" src="../media/wheel-s.webp" alt="" width="300" height="300" loading="lazy"><img class="vw r" src="../media/wheel-s.webp" alt="" width="300" height="300" loading="lazy"></div>'; }
   $$('[data-car]').forEach(function(el){
     var p=el.dataset.car.split(' ');
     if(/^slice/.test(p[0])){ el.innerHTML='<div class="slw s'+p[0].slice(5)+'">'+vcar('white')+'</div>'; return; }
@@ -1553,7 +1570,7 @@ function xInit(){
   }
   /* any other car: wheels roll while it moves through the screen */
   $$('[data-spin] .vw').forEach(function(w){ if(hc&&hc.contains(w)) { G.to(w,{rotation:720,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:.5}}); return; } G.to(w,{rotation:540,ease:'none',scrollTrigger:{trigger:w.closest('[data-spin]'),start:'top bottom',end:'bottom top',scrub:.6}}); });
-  G.to('.bigwheel img',{rotation:300,ease:'none',scrollTrigger:{trigger:'#story',start:'top bottom',end:'bottom top',scrub:.7}});
+  G.to('.bigwheel img',{y:-70,ease:'none',scrollTrigger:{trigger:'#story',start:'top bottom',end:'bottom top',scrub:.7}});
   G.from('.bigwheel',{x:-260,duration:1.2,ease:'power3.out',scrollTrigger:{trigger:'#story',start:'top 70%',once:true}});
   /* white panels rise over the dark sections */
   $$('.lt').forEach(function(p){ G.fromTo(p,{y:70,scale:.965},{y:0,scale:1,transformOrigin:'50% 0%',ease:'none',scrollTrigger:{trigger:p,start:'top bottom',end:'top 45%',scrub:.5}}); });
